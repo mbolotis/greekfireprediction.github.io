@@ -5,7 +5,7 @@ import json
 import os
 import time
 import pickle
-from keras.models import load_model
+#from keras.models import load_model
 
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
@@ -25,7 +25,7 @@ m = folium.Map(location=[37.97025, 23.72247],
                dragging=False)
 
 risk_levels = {
-    'very_low': 0.10,
+    'very_low': 0.15,
     'low': 0.25,
     'medium': 0.35,
     'high': 0.65,
