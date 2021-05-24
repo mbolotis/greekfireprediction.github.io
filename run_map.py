@@ -2,8 +2,12 @@ from bs4 import BeautifulSoup
 import requests
 import folium
 import json
-import pickle
+import os
 import time
+import pickle
+from keras.models import load_model
+
+#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 with open('C:\\Users\\hppc\\Desktop\\HAU\\Thesis\\dummy_project\\bokeh_prj\\world-countries.json') as handle:
     country_geo = json.loads(handle.read())
@@ -15,17 +19,17 @@ for i in country_geo['features']:
 
 m = folium.Map(location=[37.97025, 23.72247],
                zoom_start=7,
-               min_zoom=7,
-               max_zoom=8,
+               min_zoom=6,
+               max_zoom=7,
                scrollWheelZoom=False,
                dragging=False)
 
 risk_levels = {
     'very_low': 0.10,
-    'low': 0.30,
-    'medium': 0.40,
-    'high': 0.70,
-    'very_high': 0.80,
+    'low': 0.20,
+    'medium': 0.30,
+    'high': 0.50,
+    'very_high': 0.60,
 }
 
 
@@ -84,7 +88,7 @@ def home():
             ]
 
     url = [
-        'https://weather.com/weather/today/l/5550bb2298fbe0a38036e3c4565349d3530265a735ded45ab3599597ba2ee288',
+        'https://weather.com/weather/today/l/f3c461145e9d163303b1f6d81bb0e6cf7022d1795ee2789636f806132ccc6887',
         'https://weather.com/weather/today/l/564a252e022c554de7ff5c647a9ecf1371b108f1d8e31eb485f299fe9cc282d0',
         'https://weather.com/weather/today/l/3a3e8cecaa547df1fc60969f44698d1f6c55fd5d6dc143ddbc52ee66c853c367',
         'https://weather.com/weather/today/l/d7276d14e178e1f1bb73acf0a670418a890a743752257c1d57aa2dc3b40db2e4',
@@ -137,7 +141,7 @@ def home():
     ]
 
     location = [
-        [38.601164262, 21.350665264],
+        [38.62139, 21.40778],
         [38.36667, 23.1],
         [37.90588, 21.26936],
         [39.16014, 20.98561],
@@ -199,8 +203,12 @@ def home():
             temperature, wind, dew = scraper(c_city, c_url)
             # to feed the prediction algorithm, and return the probability
 
+            if wind == 0:
+                wind = 2
+
             probability = predict_model(temperature, wind, dew)
-            print(c_city, probability)
+            probability = probability[0][1]  # For SKlearn
+            print(c_city, temperature, wind, dew, probability)
             # probability = 10
 
             if probability <= risk_levels.get('very_low'):
@@ -222,7 +230,7 @@ def home():
 
             folium.LayerControl().add_to(m)
 
-    m.save('map\\sa_map.html')
+    m.save('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\map\\sa_map.html')
 
 
 def scraper(city, url):
@@ -263,11 +271,10 @@ def scraper(city, url):
 
 
 def predict_model(temperature, wind, dew):
-    clf = pickle.load(
-        open('C:\\Users\\hppc\\Desktop\\GitHub\\wildfire_prediction\\dummy_project\\thesisproject\\desicion_tree.pkl',
-             'rb'))
+    #clf = load_model('C:\\Users\\hppc\\Desktop\\GitHub\\wildfire_prediction\\dummy_project\\thesisproject\\nn_model.h5')  # For Keras
+    #prediction = clf.predict([[temperature, wind, dew]])
+    clf = pickle.load(open('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\naive_bayes_gb.pkl', 'rb'))  # For sklearn
     prediction = clf.predict_proba([[temperature, wind, dew]])
-    prediction = prediction[0][1]
     return prediction
 
 
