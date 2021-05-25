@@ -256,27 +256,27 @@ def predict_model(temperature, wind, dew):
 
 if __name__ == "__main__":
 
-	with open('C:\\Users\\hppc\\Desktop\\HAU\\Thesis\\dummy_project\\bokeh_prj\\world-countries.json') as handle:
-		country_geo = json.loads(handle.read())
+    with open('C:\\Users\\hppc\\Desktop\\HAU\\Thesis\\dummy_project\\bokeh_prj\\world-countries.json') as handle:
+        country_geo = json.loads(handle.read())
 
-	for i in country_geo['features']:
-		if i['properties']['name'] == 'Greece':
-			country = i
-			break
+    for i in country_geo['features']:
+        if i['properties']['name'] == 'Greece':
+            country = i
+            break
 
-	m = folium.Map(location=[37.97025, 23.72247],
-				   zoom_start=7,
-				   min_zoom=6,
-				   max_zoom=7,
-				   scrollWheelZoom=False,
-				   dragging=False)
+    m = folium.Map(location=[37.97025, 23.72247],
+                   zoom_start=7,
+                   min_zoom=6,
+                   max_zoom=7,
+                   scrollWheelZoom=False,
+                   dragging=False)
 
-	risk_levels = {
-		'very_low': 0.15,
-		'low': 0.30,
-		'medium': 0.45,
-		'high': 0.55,
-		'very_high': 0.70
-	}
+    risk_levels = {
+        'very_low': 0.15,
+        'low': 0.30,
+        'medium': 0.45,
+        'high': 0.55,
+        'very_high': 0.70
+    }
 
     home()
