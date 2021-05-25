@@ -26,9 +26,9 @@ m = folium.Map(location=[37.97025, 23.72247],
 
 risk_levels = {
     'very_low': 0.15,
-    'low': 0.25,
-    'medium': 0.50,
-    'high': 0.65,
+    'low': 0.30,
+    'medium': 0.45,
+    'high': 0.55,
     'very_high': 0.70
 }
 
