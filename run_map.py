@@ -236,6 +236,26 @@ def home():
         opacity: 0.9;
         ">
     </div>
+    <div style="
+        position: fixed; 
+        bottom: 5%;
+        right: 50%;
+        width: 25%;
+        height: 0%;
+        font-size:15px;
+        z-index:9999;
+        text-align:center;
+        ">
+        <b>Last Update (Greek Time)</b>
+        <b><input type="text" id="currentDateTime"></b>
+        <script>
+            var today = new Date();
+            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            var time = today.getHours() + ":" + today.getMinutes();
+            var dateTime = date+' '+time;
+            document.getElementById("currentDateTime").value = dateTime;
+        </script>
+    </div>
     {% endmacro %}
     '''
 
