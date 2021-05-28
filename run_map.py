@@ -5,6 +5,7 @@ import json
 import os
 import time
 import pickle
+import branca
 #from keras.models import load_model
 
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
@@ -205,6 +206,42 @@ def home():
                                     color='red', tooltip=f"{c_city}: {'Very High Risk'}").add_to(m)
 
             folium.LayerControl().add_to(m)
+
+    legend_html = '''
+    {% macro html(this, kwargs) %}
+    <div style="
+        position: fixed; 
+        top: 25%;
+        right: 5%;
+        width: 15%;
+        height: 25%;
+        font-size:15px;
+        z-index:9999;
+        ">
+        <div><p><a style="color:darkgreen;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Very Low</a></p></div>
+        <div><p><a style="color:green;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Low</a></p></div>
+        <div><p><a style="color:orange;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Medium</a></p></div>
+        <div><p><a style="color:red;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;High</a></p></div>
+        <div><p><a style="color:darkred;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Very High</a></p></div>
+    </div>
+    <div style="
+        position: fixed; 
+        top: 25%;
+        right: 5%;
+        width: 15%;
+        height: 25%;
+        font-size:15px;
+        z-index:9998;
+        background-color: #ffffff;
+        opacity: 0.9;
+        ">
+    </div>
+    {% endmacro %}
+    '''
+
+    legend = branca.element.MacroElement()
+    legend._template = branca.element.Template(legend_html)
+    m.get_root().add_child(legend)
 
     m.save('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\map\\sa_map.html')
 
