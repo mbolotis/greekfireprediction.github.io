@@ -6,7 +6,7 @@ import os
 import time
 import pickle
 import branca
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
@@ -184,7 +184,7 @@ def home():
                 wind = 2
 
             probability = predict_model(temperature, wind, dew)
-            probability = probability[0][1]  # For SKlearn
+            #probability = probability[0][1]  # For SKlearn
             print(c_city, temperature, wind, dew, probability)
             # probability = 10
 
