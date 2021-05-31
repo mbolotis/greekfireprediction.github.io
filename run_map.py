@@ -6,13 +6,12 @@ import os
 import time
 import pickle
 import branca
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Create your views here.
 def home():
-    
     city = ['AGRINION',
             'ALIARTOS',
             'ANDRAVIDA',
@@ -249,7 +248,7 @@ def scraper(city, url):
 
 
 def predict_model(temperature, wind, dew):
-    clf = load_model('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\nn_model_1.h5')  # For Keras
+    clf = load_model('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\nn_model_1.h5', compile=False)  # For Keras
     prediction = clf.predict([[temperature, wind, dew]])
     #clf = pickle.load(open('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\naive_bayes_gb.pkl', 'rb'))  # For sklearn
     #prediction = clf.predict_proba([[temperature, wind, dew]])
