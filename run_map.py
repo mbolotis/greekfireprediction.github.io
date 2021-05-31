@@ -6,12 +6,13 @@ import os
 import time
 import pickle
 import branca
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Create your views here.
 def home():
+    
     city = ['AGRINION',
             'ALIARTOS',
             'ANDRAVIDA',
