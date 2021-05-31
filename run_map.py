@@ -6,7 +6,7 @@ import os
 import time
 import pickle
 import branca
-#from keras.models import load_model
+from keras.models import load_model
 
 #os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
@@ -171,7 +171,7 @@ def home():
     ]
 
     for tmp in range(0, len(city)):
-        time.sleep(2)
+        time.sleep(2)  # avoid spam detection
         c_city = city[tmp]
         c_url = url[tmp]
         c_location = location[tmp][:]
@@ -180,7 +180,7 @@ def home():
             temperature, wind, dew = scraper(c_city, c_url)
             # to feed the prediction algorithm, and return the probability
 
-            if wind == 0:
+            if wind <= 2:  # scale as trained data
                 wind = 2
 
             probability = predict_model(temperature, wind, dew)
@@ -206,62 +206,6 @@ def home():
                                     color='red', tooltip=f"{c_city}: {'Very High Risk'}").add_to(m)
 
             folium.LayerControl().add_to(m)
-
-    legend_html = '''
-    {% macro html(this, kwargs) %}
-    <div style="
-        position: fixed; 
-        top: 25%;
-        right: 5%;
-        width: 15%;
-        height: 25%;
-        font-size:15px;
-        z-index:9999;
-        ">
-        <div><p><a style="color:darkgreen;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Very Low</a></p></div>
-        <div><p><a style="color:green;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Low</a></p></div>
-        <div><p><a style="color:orange;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Medium</a></p></div>
-        <div><p><a style="color:red;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;High</a></p></div>
-        <div><p><a style="color:darkred;font-size:25px;margin-left:20px;line-height:10px:center">&#x25CF;Very High</a></p></div>
-    </div>
-    <div style="
-        position: fixed; 
-        top: 25%;
-        right: 5%;
-        width: 15%;
-        height: 25%;
-        font-size:15px;
-        z-index:9998;
-        background-color: #ffffff;
-        opacity: 0.9;
-        ">
-    </div>
-    <div style="
-        position: fixed; 
-        bottom: 5%;
-        right: 50%;
-        width: 25%;
-        height: 0%;
-        font-size:15px;
-        z-index:9999;
-        text-align:center;
-        ">
-        <b>Last Update (Greek Time)</b>
-        <b><input type="text" id="currentDateTime"></b>
-        <script>
-            var today = new Date();
-            var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-            var time = today.getHours() + ":" + today.getMinutes();
-            var dateTime = date+' '+time;
-            document.getElementById("currentDateTime").value = dateTime;
-        </script>
-    </div>
-    {% endmacro %}
-    '''
-
-    legend = branca.element.MacroElement()
-    legend._template = branca.element.Template(legend_html)
-    m.get_root().add_child(legend)
 
     m.save('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\map\\sa_map.html')
 
@@ -304,10 +248,10 @@ def scraper(city, url):
 
 
 def predict_model(temperature, wind, dew):
-    #clf = load_model('C:\\Users\\hppc\\Desktop\\GitHub\\wildfire_prediction\\dummy_project\\thesisproject\\nn_model.h5')  # For Keras
-    #prediction = clf.predict([[temperature, wind, dew]])
-    clf = pickle.load(open('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\naive_bayes_gb.pkl', 'rb'))  # For sklearn
-    prediction = clf.predict_proba([[temperature, wind, dew]])
+    clf = load_model('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\nn_model_1.h5')  # For Keras
+    prediction = clf.predict([[temperature, wind, dew]])
+    #clf = pickle.load(open('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\naive_bayes_gb.pkl', 'rb'))  # For sklearn
+    #prediction = clf.predict_proba([[temperature, wind, dew]])
     return prediction
 
 
@@ -331,8 +275,8 @@ if __name__ == "__main__":
     risk_levels = {
         'very_low': 0.15,
         'low': 0.30,
-        'medium': 0.45,
-        'high': 0.55,
+        'medium': 0.50,
+        'high': 0.60,
         'very_high': 0.70
     }
 
