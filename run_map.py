@@ -267,7 +267,7 @@ if __name__ == "__main__":
 
     m = folium.Map(location=[37.97025, 23.72247],
                    zoom_start=6.5,
-                   min_zoom=6,
+                   min_zoom=6.5,
                    max_zoom=7,
                    scrollWheelZoom=False,
                    dragging=False)
