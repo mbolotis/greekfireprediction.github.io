@@ -216,7 +216,8 @@ def scraper(city, url):
     soup = BeautifulSoup(html_text, 'lxml')
     temperature = soup.find(class_="TodayDetailsCard--feelsLikeTempValue--2aogo")
     wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
-    dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
+    #dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
+    dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
 
     dew_point = dew[3].span.text
 
