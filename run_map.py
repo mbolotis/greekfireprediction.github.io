@@ -181,6 +181,7 @@ def home():
             # to feed the prediction algorithm, and return the probability
 
             if wind <= 2:  # scale as trained data
+                print(wind)
                 wind = 2
 
             probability = predict_model(temperature, wind, dew)
