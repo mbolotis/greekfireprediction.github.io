@@ -16,7 +16,7 @@ def home():
             'ALIARTOS',
             'ANDRAVIDA',
             'ARTA',
-            'ATHENS',
+            'ATTICA',
             'CHALKIDIKI',
             'CHANIA',
             'CHIOS',
