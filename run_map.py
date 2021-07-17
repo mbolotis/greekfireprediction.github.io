@@ -190,7 +190,7 @@ def home():
             # probability = 10
 
             if probability <= risk_levels.get('very_low'):
-                folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.3, fill_color='darkgreen',
+                folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.4, fill_color='darkgreen',
                                     color='darkgreen', tooltip=f"{c_city}: {'Very Low Risk'}").add_to(m)
             elif probability <= risk_levels.get('low'):
                 folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.6,
