@@ -231,9 +231,14 @@ def scraper(city, url):
     #wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
     #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
 
-    temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
-    wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
-    dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
+    #temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
+    #wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
+    #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
+
+    temperature = soup.find(class_="CurrentConditions--tempValue--1RYJJ")
+    wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
+    dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
+
 
     dew_point = dew[3].span.text
 
