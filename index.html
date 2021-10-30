@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ae51d8d77d744a35b30a77a1b051fa9e {
+                #map_55c07b4da1ec42cd95b54376685b50f0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_ae51d8d77d744a35b30a77a1b051fa9e" ></div>
+            <div class="folium-map" id="map_55c07b4da1ec42cd95b54376685b50f0" ></div>
         
 </body>
 <script>    
     
-            var map_ae51d8d77d744a35b30a77a1b051fa9e = L.map(
-                "map_ae51d8d77d744a35b30a77a1b051fa9e",
+            var map_55c07b4da1ec42cd95b54376685b50f0 = L.map(
+                "map_55c07b4da1ec42cd95b54376685b50f0",
                 {
                     center: [37.97025, 23.72247],
                     crs: L.CRS.EPSG3857,
@@ -57,47 +57,47 @@
 
         
     
-            var tile_layer_89a09f620f054202afa489ab76615e59 = L.tileLayer(
+            var tile_layer_72b7832c25f1428c93216b9a93efb800 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 7, "maxZoom": 7, "minZoom": 6, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_b3df720f80954e7083d1c74c78aba202 = L.circleMarker(
+            var circle_marker_f21aad26cbf24d67b2a74dcebc37a865 = L.circleMarker(
                 [38.62139, 21.40778],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_b3df720f80954e7083d1c74c78aba202.bindTooltip(
+            circle_marker_f21aad26cbf24d67b2a74dcebc37a865.bindTooltip(
                 `<div>
-                     AGRINION: Low Risk
+                     AGRINION: Medium Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_f6f5444e40a6476c863b3625df2aaa01 = {
+            var layer_control_44af8d0d55994aefb90ee8aae7332998 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_f6f5444e40a6476c863b3625df2aaa01.base_layers,
-                layer_control_f6f5444e40a6476c863b3625df2aaa01.overlays,
+                layer_control_44af8d0d55994aefb90ee8aae7332998.base_layers,
+                layer_control_44af8d0d55994aefb90ee8aae7332998.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_660bc73015984cb6937d1d976af171a9 = L.circleMarker(
+            var circle_marker_6cfc2a76319744e4a0d90b654c56cff8 = L.circleMarker(
                 [38.36667, 23.1],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_660bc73015984cb6937d1d976af171a9.bindTooltip(
+            circle_marker_6cfc2a76319744e4a0d90b654c56cff8.bindTooltip(
                 `<div>
                      ALIARTOS: Low Risk
                  </div>`,
@@ -105,27 +105,27 @@
             );
         
     
-            var layer_control_b65214c1212e4ab88266642304a70e1a = {
+            var layer_control_335d6e97b1524769b1a2d31eacd40960 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_b65214c1212e4ab88266642304a70e1a.base_layers,
-                layer_control_b65214c1212e4ab88266642304a70e1a.overlays,
+                layer_control_335d6e97b1524769b1a2d31eacd40960.base_layers,
+                layer_control_335d6e97b1524769b1a2d31eacd40960.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_cfdffd0ae32741a1b0c1b142577ad7be = L.circleMarker(
+            var circle_marker_d0c92fa1b05c40209636a7a1eecd88f0 = L.circleMarker(
                 [37.90588, 21.26936],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_cfdffd0ae32741a1b0c1b142577ad7be.bindTooltip(
+            circle_marker_d0c92fa1b05c40209636a7a1eecd88f0.bindTooltip(
                 `<div>
                      ANDRAVIDA: Low Risk
                  </div>`,
@@ -133,27 +133,27 @@
             );
         
     
-            var layer_control_f430f88acf0448ecb68aa83e2cbe1499 = {
+            var layer_control_5623a8e7d91e49789543163cf2d5c8ba = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_f430f88acf0448ecb68aa83e2cbe1499.base_layers,
-                layer_control_f430f88acf0448ecb68aa83e2cbe1499.overlays,
+                layer_control_5623a8e7d91e49789543163cf2d5c8ba.base_layers,
+                layer_control_5623a8e7d91e49789543163cf2d5c8ba.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_e15658ed6a4845cbb99d4a5634e3c918 = L.circleMarker(
+            var circle_marker_44d6b585bad64748a95f55dbeac9dd3c = L.circleMarker(
                 [39.16014, 20.98561],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_e15658ed6a4845cbb99d4a5634e3c918.bindTooltip(
+            circle_marker_44d6b585bad64748a95f55dbeac9dd3c.bindTooltip(
                 `<div>
                      ARTA: Medium Risk
                  </div>`,
@@ -161,27 +161,27 @@
             );
         
     
-            var layer_control_fcd290af24eb4676bf65d71ded367e33 = {
+            var layer_control_0c24673f99844851a9b14da07dfd8424 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_fcd290af24eb4676bf65d71ded367e33.base_layers,
-                layer_control_fcd290af24eb4676bf65d71ded367e33.overlays,
+                layer_control_0c24673f99844851a9b14da07dfd8424.base_layers,
+                layer_control_0c24673f99844851a9b14da07dfd8424.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_2a0b3f8937ae4b559e9befe1cf631d05 = L.circleMarker(
+            var circle_marker_63b492a85eea4082bdae1bbcdb6f0ffe = L.circleMarker(
                 [37.97025, 23.72247],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_2a0b3f8937ae4b559e9befe1cf631d05.bindTooltip(
+            circle_marker_63b492a85eea4082bdae1bbcdb6f0ffe.bindTooltip(
                 `<div>
                      ATTICA: Low Risk
                  </div>`,
@@ -189,27 +189,27 @@
             );
         
     
-            var layer_control_c9a434518f834e7a9cfb2a6e63fc698c = {
+            var layer_control_19e4cf3d37274b5388dfdf2014a76f82 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_c9a434518f834e7a9cfb2a6e63fc698c.base_layers,
-                layer_control_c9a434518f834e7a9cfb2a6e63fc698c.overlays,
+                layer_control_19e4cf3d37274b5388dfdf2014a76f82.base_layers,
+                layer_control_19e4cf3d37274b5388dfdf2014a76f82.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_b050facdaaec457da7fa13dac4c5d117 = L.circleMarker(
+            var circle_marker_1781801badf945959d7ef7cc64454a72 = L.circleMarker(
                 [40.416665, 23.499998],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_b050facdaaec457da7fa13dac4c5d117.bindTooltip(
+            circle_marker_1781801badf945959d7ef7cc64454a72.bindTooltip(
                 `<div>
                      CHALKIDIKI: Low Risk
                  </div>`,
@@ -217,55 +217,55 @@
             );
         
     
-            var layer_control_4dd3cf586b8842628a017cc9dfcc3c48 = {
+            var layer_control_6c9010d15176422ea93b1209c86ff56b = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_4dd3cf586b8842628a017cc9dfcc3c48.base_layers,
-                layer_control_4dd3cf586b8842628a017cc9dfcc3c48.overlays,
+                layer_control_6c9010d15176422ea93b1209c86ff56b.base_layers,
+                layer_control_6c9010d15176422ea93b1209c86ff56b.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_c164ade61e174dc8b8d90219a7a8f692 = L.circleMarker(
+            var circle_marker_316619ede6ad4cb8a5aaeac4054aadfd = L.circleMarker(
                 [35.48717, 24.07344],
-                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_c164ade61e174dc8b8d90219a7a8f692.bindTooltip(
+            circle_marker_316619ede6ad4cb8a5aaeac4054aadfd.bindTooltip(
                 `<div>
-                     CHANIA: Very Low Risk
+                     CHANIA: Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_6d89a9a1ab294ae48f864e4c278407d6 = {
+            var layer_control_90f3a3ff9dcf40bb93642f3694a10eb0 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_6d89a9a1ab294ae48f864e4c278407d6.base_layers,
-                layer_control_6d89a9a1ab294ae48f864e4c278407d6.overlays,
+                layer_control_90f3a3ff9dcf40bb93642f3694a10eb0.base_layers,
+                layer_control_90f3a3ff9dcf40bb93642f3694a10eb0.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_25e7b2aad15548c1956b4202947daaae = L.circleMarker(
+            var circle_marker_ac4ed5034bb246a382f83668a9765681 = L.circleMarker(
                 [38.36778, 26.13583],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_25e7b2aad15548c1956b4202947daaae.bindTooltip(
+            circle_marker_ac4ed5034bb246a382f83668a9765681.bindTooltip(
                 `<div>
                      CHIOS: Low Risk
                  </div>`,
@@ -273,55 +273,55 @@
             );
         
     
-            var layer_control_f396740c18e74954b3ee3928a8bbc664 = {
+            var layer_control_901be592afd84f98b26229f23d696f21 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_f396740c18e74954b3ee3928a8bbc664.base_layers,
-                layer_control_f396740c18e74954b3ee3928a8bbc664.overlays,
+                layer_control_901be592afd84f98b26229f23d696f21.base_layers,
+                layer_control_901be592afd84f98b26229f23d696f21.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_3734855943bb40c7a41535f05ec9c135 = L.circleMarker(
+            var circle_marker_59409834d1854ede9fe50d688681700f = L.circleMarker(
                 [37.08333, 25.15],
-                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_3734855943bb40c7a41535f05ec9c135.bindTooltip(
+            circle_marker_59409834d1854ede9fe50d688681700f.bindTooltip(
                 `<div>
-                     CYCLADES ISLANDS: Very Low Risk
+                     CYCLADES ISLANDS: Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_80a7b8ebeb334e92a5a96ccedc186850 = {
+            var layer_control_1a7a1c76b80a441eb10a9ead77bdb64a = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_80a7b8ebeb334e92a5a96ccedc186850.base_layers,
-                layer_control_80a7b8ebeb334e92a5a96ccedc186850.overlays,
+                layer_control_1a7a1c76b80a441eb10a9ead77bdb64a.base_layers,
+                layer_control_1a7a1c76b80a441eb10a9ead77bdb64a.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_d302b3e97a2b48a1bfe920d29659a555 = L.circleMarker(
+            var circle_marker_3ae82dd74c4c4f9293badfd51a642fb6 = L.circleMarker(
                 [41.15283, 24.1473],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_d302b3e97a2b48a1bfe920d29659a555.bindTooltip(
+            circle_marker_3ae82dd74c4c4f9293badfd51a642fb6.bindTooltip(
                 `<div>
                      DRAMA: Low Risk
                  </div>`,
@@ -329,27 +329,27 @@
             );
         
     
-            var layer_control_e38b83eb97aa46018096f2df3514c0bc = {
+            var layer_control_d654125dfad7430fb9ff4e6ec1345f2e = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_e38b83eb97aa46018096f2df3514c0bc.base_layers,
-                layer_control_e38b83eb97aa46018096f2df3514c0bc.overlays,
+                layer_control_d654125dfad7430fb9ff4e6ec1345f2e.base_layers,
+                layer_control_d654125dfad7430fb9ff4e6ec1345f2e.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_8dd7dd7cd2b64d5e88cb25cf1bc7f2a6 = L.circleMarker(
+            var circle_marker_b83431bcdf434140950985daaf361866 = L.circleMarker(
                 [40.8026, 22.04751],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_8dd7dd7cd2b64d5e88cb25cf1bc7f2a6.bindTooltip(
+            circle_marker_b83431bcdf434140950985daaf361866.bindTooltip(
                 `<div>
                      EDESSA: Low Risk
                  </div>`,
@@ -357,167 +357,167 @@
             );
         
     
-            var layer_control_44edc69469e04b79a5dccde30cff4d6d = {
+            var layer_control_efeef373942f43188abd0a0cfe7d592a = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_44edc69469e04b79a5dccde30cff4d6d.base_layers,
-                layer_control_44edc69469e04b79a5dccde30cff4d6d.overlays,
+                layer_control_efeef373942f43188abd0a0cfe7d592a.base_layers,
+                layer_control_efeef373942f43188abd0a0cfe7d592a.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_fe473e06efac45f4ada757e1b062b55f = L.circleMarker(
+            var circle_marker_e9453d2869a5444c927cbf0142b550a2 = L.circleMarker(
                 [41.433, 26.55],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            circle_marker_fe473e06efac45f4ada757e1b062b55f.bindTooltip(
-                `<div>
-                     EVROS: Low Risk
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var layer_control_e0c116e0d0604d55aef4856bfd0e0a47 = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
-                },
-                overlays :  {
-                },
-            };
-            L.control.layers(
-                layer_control_e0c116e0d0604d55aef4856bfd0e0a47.base_layers,
-                layer_control_e0c116e0d0604d55aef4856bfd0e0a47.overlays,
-                {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            var circle_marker_954c58fff65b4bbfa0b7c8d0a1f6b72b = L.circleMarker(
-                [39.36, 20.19],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            circle_marker_954c58fff65b4bbfa0b7c8d0a1f6b72b.bindTooltip(
-                `<div>
-                     FILIATES: Medium Risk
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var layer_control_7150622e878c4a3fa5fd749ef9ca909a = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
-                },
-                overlays :  {
-                },
-            };
-            L.control.layers(
-                layer_control_7150622e878c4a3fa5fd749ef9ca909a.base_layers,
-                layer_control_7150622e878c4a3fa5fd749ef9ca909a.overlays,
-                {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            var circle_marker_0bba98740cc94f74aee079282fcd6058 = L.circleMarker(
-                [40.78197, 21.40981],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            circle_marker_0bba98740cc94f74aee079282fcd6058.bindTooltip(
-                `<div>
-                     FLORINA: Low Risk
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var layer_control_36f9d80e19e64721b6cd3258d2ebe529 = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
-                },
-                overlays :  {
-                },
-            };
-            L.control.layers(
-                layer_control_36f9d80e19e64721b6cd3258d2ebe529.base_layers,
-                layer_control_36f9d80e19e64721b6cd3258d2ebe529.overlays,
-                {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            var circle_marker_91d23b8af4cf4f569e48dd5eb25f6210 = L.circleMarker(
-                [40.08452, 21.42744],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            circle_marker_91d23b8af4cf4f569e48dd5eb25f6210.bindTooltip(
-                `<div>
-                     GREVENA: Low Risk
-                 </div>`,
-                {"sticky": true}
-            );
-        
-    
-            var layer_control_cc3ccef09d1749be96fae353dbd00917 = {
-                base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
-                },
-                overlays :  {
-                },
-            };
-            L.control.layers(
-                layer_control_cc3ccef09d1749be96fae353dbd00917.base_layers,
-                layer_control_cc3ccef09d1749be96fae353dbd00917.overlays,
-                {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
-        
-    
-            var circle_marker_1a93e78b9db441918219466074f99d37 = L.circleMarker(
-                [35.32969, 25.12985],
                 {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_1a93e78b9db441918219466074f99d37.bindTooltip(
+            circle_marker_e9453d2869a5444c927cbf0142b550a2.bindTooltip(
                 `<div>
-                     HERAKLEIO: Very Low Risk
+                     EVROS: Very Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_4520672520ae458e879def3226edb312 = {
+            var layer_control_2f6566a5e72b4d26a67a595cf3b1a56a = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_4520672520ae458e879def3226edb312.base_layers,
-                layer_control_4520672520ae458e879def3226edb312.overlays,
+                layer_control_2f6566a5e72b4d26a67a595cf3b1a56a.base_layers,
+                layer_control_2f6566a5e72b4d26a67a595cf3b1a56a.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_bd1bba65bca64c74bcf9947f3339d1d9 = L.circleMarker(
+            var circle_marker_a9bee46662f447bcb06b91e451370e5b = L.circleMarker(
+                [39.36, 20.19],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            circle_marker_a9bee46662f447bcb06b91e451370e5b.bindTooltip(
+                `<div>
+                     FILIATES: Low Risk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_8b5451c7ab9945fdb64640020ceaffb2 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_8b5451c7ab9945fdb64640020ceaffb2.base_layers,
+                layer_control_8b5451c7ab9945fdb64640020ceaffb2.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            var circle_marker_b6834feb19774a5f8586b66326d76dfd = L.circleMarker(
+                [40.78197, 21.40981],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            circle_marker_b6834feb19774a5f8586b66326d76dfd.bindTooltip(
+                `<div>
+                     FLORINA: Very Low Risk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_9c32b8ce3a864ece9be053f3be8e76f5 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_9c32b8ce3a864ece9be053f3be8e76f5.base_layers,
+                layer_control_9c32b8ce3a864ece9be053f3be8e76f5.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            var circle_marker_cd61d9a6098143f48d36a7182a5eb290 = L.circleMarker(
+                [40.08452, 21.42744],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            circle_marker_cd61d9a6098143f48d36a7182a5eb290.bindTooltip(
+                `<div>
+                     GREVENA: Very Low Risk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_7ee5d98b573748c887a969fd2c3d382d = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_7ee5d98b573748c887a969fd2c3d382d.base_layers,
+                layer_control_7ee5d98b573748c887a969fd2c3d382d.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            var circle_marker_5463ed5ee2a24abb8e648a48b86f9088 = L.circleMarker(
+                [35.32969, 25.12985],
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            circle_marker_5463ed5ee2a24abb8e648a48b86f9088.bindTooltip(
+                `<div>
+                     HERAKLEIO: Low Risk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var layer_control_a42239ad90bc4067890eba8805ee943c = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_a42239ad90bc4067890eba8805ee943c.base_layers,
+                layer_control_a42239ad90bc4067890eba8805ee943c.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
+        
+    
+            var circle_marker_d25c7ce8617444d497421890b98319f0 = L.circleMarker(
                 [35.01186, 25.74234],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_bd1bba65bca64c74bcf9947f3339d1d9.bindTooltip(
+            circle_marker_d25c7ce8617444d497421890b98319f0.bindTooltip(
                 `<div>
                      IERAPETRA: Low Risk
                  </div>`,
@@ -525,27 +525,27 @@
             );
         
     
-            var layer_control_e73704a53ac04304a688690b429926b6 = {
+            var layer_control_fcaa7e89d63c47968c784873444eca3e = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_e73704a53ac04304a688690b429926b6.base_layers,
-                layer_control_e73704a53ac04304a688690b429926b6.overlays,
+                layer_control_fcaa7e89d63c47968c784873444eca3e.base_layers,
+                layer_control_fcaa7e89d63c47968c784873444eca3e.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_101c0da4609d49dc9472385ecfd815a5 = L.circleMarker(
+            var circle_marker_1193de9e10014c908f24b6129a3c77bf = L.circleMarker(
                 [39.66486, 20.85189],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_101c0da4609d49dc9472385ecfd815a5.bindTooltip(
+            circle_marker_1193de9e10014c908f24b6129a3c77bf.bindTooltip(
                 `<div>
                      IOANNINA: Low Risk
                  </div>`,
@@ -553,27 +553,27 @@
             );
         
     
-            var layer_control_5b8f3b5382c64d3789bb77021b5b7591 = {
+            var layer_control_de1ea9ead3154192baa7af804ac0b348 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_5b8f3b5382c64d3789bb77021b5b7591.base_layers,
-                layer_control_5b8f3b5382c64d3789bb77021b5b7591.overlays,
+                layer_control_de1ea9ead3154192baa7af804ac0b348.base_layers,
+                layer_control_de1ea9ead3154192baa7af804ac0b348.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_60095bd1fbc04389a1c8d86220ec1241 = L.circleMarker(
+            var circle_marker_1a56a1266e354615ae9c085aeb53c37b = L.circleMarker(
                 [39.36485, 21.92191],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_60095bd1fbc04389a1c8d86220ec1241.bindTooltip(
+            circle_marker_1a56a1266e354615ae9c085aeb53c37b.bindTooltip(
                 `<div>
                      KARDITSA: Low Risk
                  </div>`,
@@ -581,27 +581,27 @@
             );
         
     
-            var layer_control_95a68594f23a4a16b6c55ca1cb5a738e = {
+            var layer_control_33ce97217b97470b959a7dcf4942de37 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_95a68594f23a4a16b6c55ca1cb5a738e.base_layers,
-                layer_control_95a68594f23a4a16b6c55ca1cb5a738e.overlays,
+                layer_control_33ce97217b97470b959a7dcf4942de37.base_layers,
+                layer_control_33ce97217b97470b959a7dcf4942de37.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_3e3894df2d6f4117b7cee2567cfadb15 = L.circleMarker(
+            var circle_marker_3dd7b334452c4138b4cefe721ea4ae4d = L.circleMarker(
                 [38.91218, 21.79836],
                 {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_3e3894df2d6f4117b7cee2567cfadb15.bindTooltip(
+            circle_marker_3dd7b334452c4138b4cefe721ea4ae4d.bindTooltip(
                 `<div>
                      KARPENISI: Very Low Risk
                  </div>`,
@@ -609,55 +609,55 @@
             );
         
     
-            var layer_control_beb7c862115a4d7a8f348fcd24751f40 = {
+            var layer_control_0dea2e9a707241dfaeaf6db44780c9c4 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_beb7c862115a4d7a8f348fcd24751f40.base_layers,
-                layer_control_beb7c862115a4d7a8f348fcd24751f40.overlays,
+                layer_control_0dea2e9a707241dfaeaf6db44780c9c4.base_layers,
+                layer_control_0dea2e9a707241dfaeaf6db44780c9c4.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_14c28243244a4108880903fa2b025108 = L.circleMarker(
+            var circle_marker_693b0b7cb470456386f5efe428f284fb = L.circleMarker(
                 [40.52165, 21.26341],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_14c28243244a4108880903fa2b025108.bindTooltip(
+            circle_marker_693b0b7cb470456386f5efe428f284fb.bindTooltip(
                 `<div>
-                     KASTORIA: Low Risk
+                     KASTORIA: Very Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_8bcabceda8fe4ee997e85a1617f9a615 = {
+            var layer_control_9d1749416c5c48bc8d1937c071375bf0 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_8bcabceda8fe4ee997e85a1617f9a615.base_layers,
-                layer_control_8bcabceda8fe4ee997e85a1617f9a615.overlays,
+                layer_control_9d1749416c5c48bc8d1937c071375bf0.base_layers,
+                layer_control_9d1749416c5c48bc8d1937c071375bf0.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_7d067df0002b450c82a15aa5cf663b3e = L.circleMarker(
+            var circle_marker_aa33a2a429744ad69fbe5f9f2cf9b5b1 = L.circleMarker(
                 [40.26956, 22.50608],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_7d067df0002b450c82a15aa5cf663b3e.bindTooltip(
+            circle_marker_aa33a2a429744ad69fbe5f9f2cf9b5b1.bindTooltip(
                 `<div>
                      KATERINI: Low Risk
                  </div>`,
@@ -665,55 +665,55 @@
             );
         
     
-            var layer_control_663ef6970c924c5f9516c84fb639ea26 = {
+            var layer_control_8300693a110845d8a0020c15db08522e = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_663ef6970c924c5f9516c84fb639ea26.base_layers,
-                layer_control_663ef6970c924c5f9516c84fb639ea26.overlays,
+                layer_control_8300693a110845d8a0020c15db08522e.base_layers,
+                layer_control_8300693a110845d8a0020c15db08522e.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_4ad68e31f813457d9ed5098094e6af45 = L.circleMarker(
+            var circle_marker_05867f3f34ff46f19089882d32d5fff4 = L.circleMarker(
                 [40.93959, 24.40687],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_4ad68e31f813457d9ed5098094e6af45.bindTooltip(
+            circle_marker_05867f3f34ff46f19089882d32d5fff4.bindTooltip(
                 `<div>
-                     KAVALA: Medium Risk
+                     KAVALA: Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_e065b32a3dd74710a4d68fb82a3de73b = {
+            var layer_control_678169c118944a7480ab71b2e610e1d5 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_e065b32a3dd74710a4d68fb82a3de73b.base_layers,
-                layer_control_e065b32a3dd74710a4d68fb82a3de73b.overlays,
+                layer_control_678169c118944a7480ab71b2e610e1d5.base_layers,
+                layer_control_678169c118944a7480ab71b2e610e1d5.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_8f9011b7274e4f3e91241bb62d05c75c = L.circleMarker(
+            var circle_marker_d00f8dabe71b4574891aa7c84a112129 = L.circleMarker(
                 [38.249999, 20.499998],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_8f9011b7274e4f3e91241bb62d05c75c.bindTooltip(
+            circle_marker_d00f8dabe71b4574891aa7c84a112129.bindTooltip(
                 `<div>
                      KEFALLONIA: Low Risk
                  </div>`,
@@ -721,27 +721,27 @@
             );
         
     
-            var layer_control_f8498b645b064c878c32512a0d00a5fe = {
+            var layer_control_d9823509d1f644dfbfe87d3e21e5c860 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_f8498b645b064c878c32512a0d00a5fe.base_layers,
-                layer_control_f8498b645b064c878c32512a0d00a5fe.overlays,
+                layer_control_d9823509d1f644dfbfe87d3e21e5c860.base_layers,
+                layer_control_d9823509d1f644dfbfe87d3e21e5c860.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_7a85406087c54d43a9a7d88a2d94d459 = L.circleMarker(
+            var circle_marker_942fe3aad0454463bf07e930f003186f = L.circleMarker(
                 [39.62069, 19.91975],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_7a85406087c54d43a9a7d88a2d94d459.bindTooltip(
+            circle_marker_942fe3aad0454463bf07e930f003186f.bindTooltip(
                 `<div>
                      KERKIRA: Low Risk
                  </div>`,
@@ -749,27 +749,27 @@
             );
         
     
-            var layer_control_dd8b9b097bbf48adaf7e91c8cabbad39 = {
+            var layer_control_83b13fee9d4b43f9a1d4698c16fe01fa = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_dd8b9b097bbf48adaf7e91c8cabbad39.base_layers,
-                layer_control_dd8b9b097bbf48adaf7e91c8cabbad39.overlays,
+                layer_control_83b13fee9d4b43f9a1d4698c16fe01fa.base_layers,
+                layer_control_83b13fee9d4b43f9a1d4698c16fe01fa.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_81d59d95f73a4b8b90b6347d5deb0f55 = L.circleMarker(
+            var circle_marker_804f00aa87a941c6abd03be461ec3b7c = L.circleMarker(
                 [40.99302, 22.87433],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_81d59d95f73a4b8b90b6347d5deb0f55.bindTooltip(
+            circle_marker_804f00aa87a941c6abd03be461ec3b7c.bindTooltip(
                 `<div>
                      KILKIS: Low Risk
                  </div>`,
@@ -777,55 +777,55 @@
             );
         
     
-            var layer_control_821b96eb0a234897992476f12bfcbe1c = {
+            var layer_control_17606b9062144a018c97f149d7bf19ab = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_821b96eb0a234897992476f12bfcbe1c.base_layers,
-                layer_control_821b96eb0a234897992476f12bfcbe1c.overlays,
+                layer_control_17606b9062144a018c97f149d7bf19ab.base_layers,
+                layer_control_17606b9062144a018c97f149d7bf19ab.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_6fb4135eaaff495ba7aa3809e795123c = L.circleMarker(
+            var circle_marker_ea339d56d3b04f0eae9c7cdb60c1b955 = L.circleMarker(
                 [41.11917, 25.40535],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_6fb4135eaaff495ba7aa3809e795123c.bindTooltip(
+            circle_marker_ea339d56d3b04f0eae9c7cdb60c1b955.bindTooltip(
                 `<div>
-                     KOMOTINI: Low Risk
+                     KOMOTINI: Very Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_448773428e7e4eb388855aee2ce537bc = {
+            var layer_control_80e8793db623456ca2a2c409eb24958f = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_448773428e7e4eb388855aee2ce537bc.base_layers,
-                layer_control_448773428e7e4eb388855aee2ce537bc.overlays,
+                layer_control_80e8793db623456ca2a2c409eb24958f.base_layers,
+                layer_control_80e8793db623456ca2a2c409eb24958f.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_52ecf31ef3304154a47266e97b76b8a0 = L.circleMarker(
+            var circle_marker_2dc6b949a6d34ad4b41fb80712ee16ce = L.circleMarker(
                 [36.8499966, 27.2333324],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_52ecf31ef3304154a47266e97b76b8a0.bindTooltip(
+            circle_marker_2dc6b949a6d34ad4b41fb80712ee16ce.bindTooltip(
                 `<div>
                      KOS: Low Risk
                  </div>`,
@@ -833,55 +833,55 @@
             );
         
     
-            var layer_control_28e6d6943860467dbb0bf105318928e5 = {
+            var layer_control_4b1298e9a07f49c78bf95d3aa83a880a = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_28e6d6943860467dbb0bf105318928e5.base_layers,
-                layer_control_28e6d6943860467dbb0bf105318928e5.overlays,
+                layer_control_4b1298e9a07f49c78bf95d3aa83a880a.base_layers,
+                layer_control_4b1298e9a07f49c78bf95d3aa83a880a.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_94a81796379f49628a3a146c9bab7fda = L.circleMarker(
+            var circle_marker_4b3287f0dba44f2994775950f558a8dd = L.circleMarker(
                 [40.30069, 21.78896],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_94a81796379f49628a3a146c9bab7fda.bindTooltip(
+            circle_marker_4b3287f0dba44f2994775950f558a8dd.bindTooltip(
                 `<div>
-                     KOZANI: Low Risk
+                     KOZANI: Very Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_f5c8db6a5b1d44579cc9cb906d93a235 = {
+            var layer_control_7f2474aab7274210a1588eaf819a1385 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_f5c8db6a5b1d44579cc9cb906d93a235.base_layers,
-                layer_control_f5c8db6a5b1d44579cc9cb906d93a235.overlays,
+                layer_control_7f2474aab7274210a1588eaf819a1385.base_layers,
+                layer_control_7f2474aab7274210a1588eaf819a1385.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_33b065af397e4b4e916ed49be0412b06 = L.circleMarker(
+            var circle_marker_084fc7a2b3334ba1a442ac0dcc23afa7 = L.circleMarker(
                 [38.9, 22.43333],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_33b065af397e4b4e916ed49be0412b06.bindTooltip(
+            circle_marker_084fc7a2b3334ba1a442ac0dcc23afa7.bindTooltip(
                 `<div>
                      LAMIA: Low Risk
                  </div>`,
@@ -889,27 +889,27 @@
             );
         
     
-            var layer_control_d11fa4fbb4654a6bb91f1b7d723a565c = {
+            var layer_control_fd9295cd474543e4b3cbb6c074bc9166 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_d11fa4fbb4654a6bb91f1b7d723a565c.base_layers,
-                layer_control_d11fa4fbb4654a6bb91f1b7d723a565c.overlays,
+                layer_control_fd9295cd474543e4b3cbb6c074bc9166.base_layers,
+                layer_control_fd9295cd474543e4b3cbb6c074bc9166.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_ed0cfac42aa74b089a0749ed2a3121ca = L.circleMarker(
+            var circle_marker_0376df67d0e64dfeaa12d9c1a59b5219 = L.circleMarker(
                 [39.643452, 22.413208],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_ed0cfac42aa74b089a0749ed2a3121ca.bindTooltip(
+            circle_marker_0376df67d0e64dfeaa12d9c1a59b5219.bindTooltip(
                 `<div>
                      LARISA: Low Risk
                  </div>`,
@@ -917,27 +917,27 @@
             );
         
     
-            var layer_control_6439e50c227d42af94f18f943452560f = {
+            var layer_control_83655b11a03a483ca6c46ebec25b8800 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_6439e50c227d42af94f18f943452560f.base_layers,
-                layer_control_6439e50c227d42af94f18f943452560f.overlays,
+                layer_control_83655b11a03a483ca6c46ebec25b8800.base_layers,
+                layer_control_83655b11a03a483ca6c46ebec25b8800.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_828b342db3ed4d8592cf42b5d4848bec = L.circleMarker(
+            var circle_marker_242ed67796c4432fa06b885b588a09c2 = L.circleMarker(
                 [38.7166638, 20.6499974],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_828b342db3ed4d8592cf42b5d4848bec.bindTooltip(
+            circle_marker_242ed67796c4432fa06b885b588a09c2.bindTooltip(
                 `<div>
                      LEYKADA: Low Risk
                  </div>`,
@@ -945,27 +945,27 @@
             );
         
     
-            var layer_control_2feee62acdd440b3b8dc920387c81fe8 = {
+            var layer_control_e5e5d6df60f94b7580c2cb8e1ae75c84 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_2feee62acdd440b3b8dc920387c81fe8.base_layers,
-                layer_control_2feee62acdd440b3b8dc920387c81fe8.overlays,
+                layer_control_e5e5d6df60f94b7580c2cb8e1ae75c84.base_layers,
+                layer_control_e5e5d6df60f94b7580c2cb8e1ae75c84.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_88f56088864549f9a21a3cff09c807c7 = L.circleMarker(
+            var circle_marker_b96c77975ded4f3a8c603104447eeadd = L.circleMarker(
                 [37.249999, 21.83333],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_88f56088864549f9a21a3cff09c807c7.bindTooltip(
+            circle_marker_b96c77975ded4f3a8c603104447eeadd.bindTooltip(
                 `<div>
                      METHONI: Low Risk
                  </div>`,
@@ -973,27 +973,27 @@
             );
         
     
-            var layer_control_4d7bfce3fe304d9f84bb45de38bb7b6c = {
+            var layer_control_f783552df7cd4de282ea89d43a076179 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_4d7bfce3fe304d9f84bb45de38bb7b6c.base_layers,
-                layer_control_4d7bfce3fe304d9f84bb45de38bb7b6c.overlays,
+                layer_control_f783552df7cd4de282ea89d43a076179.base_layers,
+                layer_control_f783552df7cd4de282ea89d43a076179.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_7bd2983ecfc3401daa2e9dd0a241bf75 = L.circleMarker(
+            var circle_marker_9b7b94c1f4e24ce8b92f40a14b667f41 = L.circleMarker(
                 [39.11, 26.55472],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_7bd2983ecfc3401daa2e9dd0a241bf75.bindTooltip(
+            circle_marker_9b7b94c1f4e24ce8b92f40a14b667f41.bindTooltip(
                 `<div>
                      MITILINI: Low Risk
                  </div>`,
@@ -1001,27 +1001,27 @@
             );
         
     
-            var layer_control_1c84380303644ef5b605795bcbc75181 = {
+            var layer_control_38e133e1c19a4867ba2b44d232e6f8b0 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_1c84380303644ef5b605795bcbc75181.base_layers,
-                layer_control_1c84380303644ef5b605795bcbc75181.overlays,
+                layer_control_38e133e1c19a4867ba2b44d232e6f8b0.base_layers,
+                layer_control_38e133e1c19a4867ba2b44d232e6f8b0.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_c9284ae7c6e340a3857be0aeee7e2013 = L.circleMarker(
+            var circle_marker_3170b94682c1453d9b61e8dcb5af12cb = L.circleMarker(
                 [37.568497726, 22.78749685],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_c9284ae7c6e340a3857be0aeee7e2013.bindTooltip(
+            circle_marker_3170b94682c1453d9b61e8dcb5af12cb.bindTooltip(
                 `<div>
                      NAFPLIO: Low Risk
                  </div>`,
@@ -1029,55 +1029,55 @@
             );
         
     
-            var layer_control_0c0a36aba02b4b4789500579db48bdd8 = {
+            var layer_control_b3deabd7cfe94b429da543fe83d0c0d4 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_0c0a36aba02b4b4789500579db48bdd8.base_layers,
-                layer_control_0c0a36aba02b4b4789500579db48bdd8.overlays,
+                layer_control_b3deabd7cfe94b429da543fe83d0c0d4.base_layers,
+                layer_control_b3deabd7cfe94b429da543fe83d0c0d4.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_87fc99ba01a74c7bbe3d23601452b712 = L.circleMarker(
+            var circle_marker_17282bc8fc2847fe8b22f5624a8112af = L.circleMarker(
                 [39.28015, 22.81819],
-                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_87fc99ba01a74c7bbe3d23601452b712.bindTooltip(
+            circle_marker_17282bc8fc2847fe8b22f5624a8112af.bindTooltip(
                 `<div>
-                     NEA ANCHIALOS: Very Low Risk
+                     NEA ANCHIALOS: Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_f7e05ec13a4e4a8ebbc66f2e3924c196 = {
+            var layer_control_b39d9c1e17fa4bf19e3e0fe08473a61d = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_f7e05ec13a4e4a8ebbc66f2e3924c196.base_layers,
-                layer_control_f7e05ec13a4e4a8ebbc66f2e3924c196.overlays,
+                layer_control_b39d9c1e17fa4bf19e3e0fe08473a61d.base_layers,
+                layer_control_b39d9c1e17fa4bf19e3e0fe08473a61d.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_4cd1ca7b81e042d6a512962edc94b542 = L.circleMarker(
+            var circle_marker_3bcddd53ac1345dd97369503148eb257 = L.circleMarker(
                 [38.24444, 21.73444],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_4cd1ca7b81e042d6a512962edc94b542.bindTooltip(
+            circle_marker_3bcddd53ac1345dd97369503148eb257.bindTooltip(
                 `<div>
                      PATRA: Low Risk
                  </div>`,
@@ -1085,55 +1085,55 @@
             );
         
     
-            var layer_control_bc1c8646c7534888baee008a5b0662c1 = {
+            var layer_control_5ada496a71354ac7947752a171e963ae = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_bc1c8646c7534888baee008a5b0662c1.base_layers,
-                layer_control_bc1c8646c7534888baee008a5b0662c1.overlays,
+                layer_control_5ada496a71354ac7947752a171e963ae.base_layers,
+                layer_control_5ada496a71354ac7947752a171e963ae.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_7752fc89e2ec4800bfa62bb2c0e66021 = L.circleMarker(
+            var circle_marker_144ac6dfe8904971b9f872b1963dd373 = L.circleMarker(
                 [35.36555, 24.48232],
-                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_7752fc89e2ec4800bfa62bb2c0e66021.bindTooltip(
+            circle_marker_144ac6dfe8904971b9f872b1963dd373.bindTooltip(
                 `<div>
-                     RETHYMNON: Very Low Risk
+                     RETHYMNON: Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_5e2356948e0d40288ceffd63c64bdb29 = {
+            var layer_control_b39479b86b6a4b42b9d47c71101cd329 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_5e2356948e0d40288ceffd63c64bdb29.base_layers,
-                layer_control_5e2356948e0d40288ceffd63c64bdb29.overlays,
+                layer_control_b39479b86b6a4b42b9d47c71101cd329.base_layers,
+                layer_control_b39479b86b6a4b42b9d47c71101cd329.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_9763453555a747ebb92ed88add28ccd7 = L.circleMarker(
+            var circle_marker_cad2c436b5ac4352aff66788aca59c5f = L.circleMarker(
                 [39.55493, 21.76837],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_9763453555a747ebb92ed88add28ccd7.bindTooltip(
+            circle_marker_cad2c436b5ac4352aff66788aca59c5f.bindTooltip(
                 `<div>
                      TRIKALA: Low Risk
                  </div>`,
@@ -1141,55 +1141,55 @@
             );
         
     
-            var layer_control_d7e1720f9e1c4794bd9027bf0c044572 = {
+            var layer_control_8895cd3b62c2492c963ec4713aa2e211 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_d7e1720f9e1c4794bd9027bf0c044572.base_layers,
-                layer_control_d7e1720f9e1c4794bd9027bf0c044572.overlays,
+                layer_control_8895cd3b62c2492c963ec4713aa2e211.base_layers,
+                layer_control_8895cd3b62c2492c963ec4713aa2e211.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_f6342a6313854416b4aa5a4f52296cee = L.circleMarker(
+            var circle_marker_136158531df04e13afbb0ed89f7b5d0f = L.circleMarker(
                 [37.50889, 22.37944],
-                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_f6342a6313854416b4aa5a4f52296cee.bindTooltip(
+            circle_marker_136158531df04e13afbb0ed89f7b5d0f.bindTooltip(
                 `<div>
-                     TRIPOLI: Very Low Risk
+                     TRIPOLI: Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_72fcb2ad25db45c6adb1e8b5e5b990f6 = {
+            var layer_control_ea6b6ad5e2534a0e8dc601294213674a = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_72fcb2ad25db45c6adb1e8b5e5b990f6.base_layers,
-                layer_control_72fcb2ad25db45c6adb1e8b5e5b990f6.overlays,
+                layer_control_ea6b6ad5e2534a0e8dc601294213674a.base_layers,
+                layer_control_ea6b6ad5e2534a0e8dc601294213674a.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_1cd04b0b8e78404a9c785f40aaacc717 = L.circleMarker(
+            var circle_marker_ba82715b87de4be09c031ccebc8ade04 = L.circleMarker(
                 [41.13488, 24.888],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_1cd04b0b8e78404a9c785f40aaacc717.bindTooltip(
+            circle_marker_ba82715b87de4be09c031ccebc8ade04.bindTooltip(
                 `<div>
                      XANTHI: Low Risk
                  </div>`,
@@ -1197,27 +1197,27 @@
             );
         
     
-            var layer_control_6a780bd52cdc4b11bbde8d6ad103a54d = {
+            var layer_control_d1420a989be24aeba0fde9ea4f0a9051 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_6a780bd52cdc4b11bbde8d6ad103a54d.base_layers,
-                layer_control_6a780bd52cdc4b11bbde8d6ad103a54d.overlays,
+                layer_control_d1420a989be24aeba0fde9ea4f0a9051.base_layers,
+                layer_control_d1420a989be24aeba0fde9ea4f0a9051.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_b50ee274843f44318ad8680a6428dbb0 = L.circleMarker(
+            var circle_marker_cd6b504acdef4cd584a66d194579fcc6 = L.circleMarker(
                 [37.7999968, 20.749997],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_b50ee274843f44318ad8680a6428dbb0.bindTooltip(
+            circle_marker_cd6b504acdef4cd584a66d194579fcc6.bindTooltip(
                 `<div>
                      ZAKINTHOS: Low Risk
                  </div>`,
@@ -1225,27 +1225,27 @@
             );
         
     
-            var layer_control_aab76d732eab45f2be6ab5f6f68a6ef0 = {
+            var layer_control_b2ad2a0504d541d5973ff74161128b98 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_aab76d732eab45f2be6ab5f6f68a6ef0.base_layers,
-                layer_control_aab76d732eab45f2be6ab5f6f68a6ef0.overlays,
+                layer_control_b2ad2a0504d541d5973ff74161128b98.base_layers,
+                layer_control_b2ad2a0504d541d5973ff74161128b98.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_73858e53d3e7463797fc2a75a2c91a5c = L.circleMarker(
+            var circle_marker_1f8fedb542c447ad9648dfb617163d3e = L.circleMarker(
                 [38.499998, 24.0],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_73858e53d3e7463797fc2a75a2c91a5c.bindTooltip(
+            circle_marker_1f8fedb542c447ad9648dfb617163d3e.bindTooltip(
                 `<div>
                      EUBOEA: Low Risk
                  </div>`,
@@ -1253,27 +1253,27 @@
             );
         
     
-            var layer_control_79443b24cd4142b6a8926a594fd7546c = {
+            var layer_control_9d8a5d60532c46bb889be5ca49dc07de = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_79443b24cd4142b6a8926a594fd7546c.base_layers,
-                layer_control_79443b24cd4142b6a8926a594fd7546c.overlays,
+                layer_control_9d8a5d60532c46bb889be5ca49dc07de.base_layers,
+                layer_control_9d8a5d60532c46bb889be5ca49dc07de.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_39ec83d14a704baf959a5409f2e4d742 = L.circleMarker(
+            var circle_marker_1775c9fff26645239adb1bbb7842073a = L.circleMarker(
                 [36.44083, 28.2225],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_39ec83d14a704baf959a5409f2e4d742.bindTooltip(
+            circle_marker_1775c9fff26645239adb1bbb7842073a.bindTooltip(
                 `<div>
                      RHODOS: Low Risk
                  </div>`,
@@ -1281,83 +1281,83 @@
             );
         
     
-            var layer_control_3898a38b612a45e4a2685cd8fe15f6d2 = {
+            var layer_control_a9da021fbe064dccbee6dda639206874 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_3898a38b612a45e4a2685cd8fe15f6d2.base_layers,
-                layer_control_3898a38b612a45e4a2685cd8fe15f6d2.overlays,
+                layer_control_a9da021fbe064dccbee6dda639206874.base_layers,
+                layer_control_a9da021fbe064dccbee6dda639206874.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_9b7ddc459427428eb5f43d4100c2c5c6 = L.circleMarker(
+            var circle_marker_898527e162e84bcfa06d28631f9bd273 = L.circleMarker(
                 [41.08499, 23.54757],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_9b7ddc459427428eb5f43d4100c2c5c6.bindTooltip(
+            circle_marker_898527e162e84bcfa06d28631f9bd273.bindTooltip(
                 `<div>
-                     SERRES: Low Risk
+                     SERRES: Very Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_9dd1ff4cdd474e91b4da21d644c6b1ea = {
+            var layer_control_244bcf483ba9474296a824baaee147d6 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_9dd1ff4cdd474e91b4da21d644c6b1ea.base_layers,
-                layer_control_9dd1ff4cdd474e91b4da21d644c6b1ea.overlays,
+                layer_control_244bcf483ba9474296a824baaee147d6.base_layers,
+                layer_control_244bcf483ba9474296a824baaee147d6.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_db634d84e3d74ce6bc5f705a7ecf112c = L.circleMarker(
+            var circle_marker_89f91ee7c80344008f16749826a42dbd = L.circleMarker(
                 [40.84995, 25.87644],
-                {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_db634d84e3d74ce6bc5f705a7ecf112c.bindTooltip(
+            circle_marker_89f91ee7c80344008f16749826a42dbd.bindTooltip(
                 `<div>
-                     ALEXANDROUPOLI: Low Risk
+                     ALEXANDROUPOLI: Very Low Risk
                  </div>`,
                 {"sticky": true}
             );
         
     
-            var layer_control_a625a8214f2346e9a252a5f8ecf1c30a = {
+            var layer_control_37d6489f7bcc404583011a241d077d77 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_a625a8214f2346e9a252a5f8ecf1c30a.base_layers,
-                layer_control_a625a8214f2346e9a252a5f8ecf1c30a.overlays,
+                layer_control_37d6489f7bcc404583011a241d077d77.base_layers,
+                layer_control_37d6489f7bcc404583011a241d077d77.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            var circle_marker_68c5b7d510d845bdb79e58c5d83623bd = L.circleMarker(
+            var circle_marker_b0af9ee06a3846acb3c1929040ee71cf = L.circleMarker(
                 [37.06, 22.44],
                 {"bubblingMouseEvents": true, "color": "lightgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20, "stroke": true, "weight": 3}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
     
-            circle_marker_68c5b7d510d845bdb79e58c5d83623bd.bindTooltip(
+            circle_marker_b0af9ee06a3846acb3c1929040ee71cf.bindTooltip(
                 `<div>
                      KOSMAS: Low Risk
                  </div>`,
@@ -1365,17 +1365,17 @@
             );
         
     
-            var layer_control_47e55ebf9b6646bbac9efaccfc26224b = {
+            var layer_control_4caa0989daa74e3fac50791f48922e30 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_89a09f620f054202afa489ab76615e59,
+                    "openstreetmap" : tile_layer_72b7832c25f1428c93216b9a93efb800,
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
-                layer_control_47e55ebf9b6646bbac9efaccfc26224b.base_layers,
-                layer_control_47e55ebf9b6646bbac9efaccfc26224b.overlays,
+                layer_control_4caa0989daa74e3fac50791f48922e30.base_layers,
+                layer_control_4caa0989daa74e3fac50791f48922e30.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_ae51d8d77d744a35b30a77a1b051fa9e);
+            ).addTo(map_55c07b4da1ec42cd95b54376685b50f0);
         
 </script>
