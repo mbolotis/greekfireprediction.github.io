@@ -8,7 +8,6 @@ import pickle
 import branca
 import tensorflow
 import lxml
-#import git
 
 def home():
   city = ['AGRINION',
