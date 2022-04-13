@@ -1,14 +1,9 @@
 name: Update Map
 
-on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags' 
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+    
 jobs:
   build:
     runs-on: ubuntu-latest
