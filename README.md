@@ -27,6 +27,8 @@ The model can be used in real-time to provide a risk level of fire incident
 - Sklearn, Tensoflow, Keras: To implements the various machine learning algorithms
 - Folium: To visualize the results on a dynamic map
 - BeautifulSoup and Requests: For the web-scraping process
+- GitHub Pages host the web application 
+- GitHub Actions perform the Continuous integration (CI) by updating the map every 4 hours 
 
 ### General Details 
 
