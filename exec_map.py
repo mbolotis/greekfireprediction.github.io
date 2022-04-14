@@ -196,7 +196,7 @@ def home():
       else:
         folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.8, fill_color='red',
                   color='darkred', tooltip=f"{c_city}: {'Very High Risk'}").add_to(m)
-      folium.LayerControl().add_to(m)
+      #folium.LayerControl().add_to(m)
   #m.save('/home/runner/work/bet-scaper/bet-scaper/sa_map.html')
   m.save('index.html')
   
