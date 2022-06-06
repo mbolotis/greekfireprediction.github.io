@@ -181,20 +181,19 @@ def home():
       print(c_city, temperature, wind, dew, probability)
       # probability = 10
       if probability <= risk_levels.get('very_low'):
-        folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.4, fill_color='darkgreen',
-                  color='darkgreen', tooltip=f"{c_city}: {'Very Low Risk'}").add_to(m)
+        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.6, fill_color='lightgreen',
+                  color='lightgreen', tooltip=f"{c_city}: {'Very Low Risk'}").add_to(m)
       elif probability <= risk_levels.get('low'):
-        folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.6,
-                  fill_color='darkgreen', color='lightgreen',
-                  tooltip=f"{c_city}: {'Low Risk'}").add_to(m)
+        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.6, fill_color='darkgreen', 
+                  color='darkgreen', tooltip=f"{c_city}: {'Low Risk'}").add_to(m)
       elif probability <= risk_levels.get('medium'):
-        folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.6, fill_color='orange',
+        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.6, fill_color='orange',
                   color='orange', tooltip=f"{c_city}: {'Medium Risk'}").add_to(m)
       elif probability <= risk_levels.get('high'):
-        folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.5, fill_color='darkred',
+        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.5, fill_color='darkred',
                   color='darkred', tooltip=f"{c_city}: {'High Risk'}").add_to(m)
       else:
-        folium.CircleMarker(location=c_location, radius=20, fill=True, fill_opacity=0.8, fill_color='red',
+        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.8, fill_color='red',
                   color='darkred', tooltip=f"{c_city}: {'Very High Risk'}").add_to(m)
       #folium.LayerControl().add_to(m)
   #m.save('/home/runner/work/bet-scaper/bet-scaper/sa_map.html')
