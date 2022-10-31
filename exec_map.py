@@ -227,6 +227,8 @@ def scraper(city, url):
   temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
   wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
   #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
+  print(temperature)
+  print(wind)
   dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
   print(temperature)
   print(wind)
