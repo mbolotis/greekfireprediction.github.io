@@ -240,23 +240,28 @@ def scraper(city, url):
     # dew
   try:
     dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
+    dew_point = dew[3].span.text
   except IndexError:
     try:
       dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
+      dew_point = dew[3].span.text
     except IndexError:
       try:
         dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--23DP5')
+        dew_point = dew[3].span.text
       except IndexError:
         try:
           dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
+          dew_point = dew[3].span.text
         except IndexError:
           try:
             dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
+            dew_point = dew[3].span.text
           except:
             raise IndexError("DEW: New Entry - Check Page Source at weather.com")   
               
               
-  dew_point = dew[3].span.text              
+  #dew_point = dew[3].span.text              
   wind_speed = ''
   pos = 0
 
