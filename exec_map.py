@@ -206,37 +206,60 @@ def home():
 def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
-  #temperature = soup.find(class_="TodayDetailsCard--feelsLikeTempValue--2aogo")
-  #wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
-  #dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
-  #temperature = soup.find(class_="CurrentConditions--tempValue--MHmYY")
-  #wind = soup.find(class_="Wind--windWrapper--3Ly7c undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
-  #temperature = soup.find(class_="TodayDetailsCard--feelsLikeTempValue--2aogo")
-  #wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--23DP5')
-  #temperature = soup.find(class_="CurrentConditions--tempValue--1RYJJ")
-  #wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
-  #temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
-  #wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
-  #temperature = soup.find(class_="CurrentConditions--tempValue--1RYJJ")
-  #wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
   
-  #temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
-  #wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
-  #temperature = soup.find(class_="CurrentConditions--tempValue--MHmYY")
-  #wind = soup.find(class_="Wind--windWrapper--3Ly7c undefined")
-  #dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
-  temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
-  wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
-  dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
-  dew_point = dew[3].span.text
+  # temperature
+  try:
+    temperature = soup.find(class_="TodayDetailsCard--feelsLikeTempValue--2aogo")
+  except IndexError:
+    try:
+      temperature = soup.find(class_="CurrentConditions--tempValue--MHmYY")
+    except IndexError:
+      try:
+        temperature = soup.find(class_="CurrentConditions--tempValue--1RYJJ")
+      except IndexError:
+        try:
+          temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
+        except IndexError:
+          raise IndexError("TEMPERATURE: New Entry - Check Page Source at weather.com")
+  
+  # wind 
+  try:
+      wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
+    except IndexError:
+      try:
+        wind = soup.find(class_="Wind--windWrapper--3Ly7c undefined")
+      except IndexError:
+        try:
+          wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
+        except IndexError:
+          try:
+            wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
+          except IndexError:
+            raise IndexError("WIND: New Entry - Check Page Source at weather.com") 
+    
+    # dew
+    try:
+      dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
+    except IndexError:
+      try:
+        dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
+      except IndexError:
+        try:
+          dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--23DP5')
+        except IndexError:
+          try:
+            dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
+          except IndexError:
+            try:
+              dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
+            except:
+              raise IndexError("DEW: New Entry - Check Page Source at weather.com")   
+              
+              
+  dew_point = dew[3].span.text              
   wind_speed = ''
   pos = 0
+
   for i in wind.text:
     if i + wind.text[pos + 1] + wind.text[pos + 2] == 'mph' and pos < len(wind.text) - 1:
       wind_speed = wind.text[pos - 3:pos - 1]
