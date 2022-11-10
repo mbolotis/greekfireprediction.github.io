@@ -224,36 +224,36 @@ def scraper(city, url):
   
   # wind 
   try:
-      wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
+    wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
+  except IndexError:
+    try:
+      wind = soup.find(class_="Wind--windWrapper--3Ly7c undefined")
     except IndexError:
       try:
-        wind = soup.find(class_="Wind--windWrapper--3Ly7c undefined")
+        wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
       except IndexError:
         try:
-          wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
+          wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
         except IndexError:
-          try:
-            wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
-          except IndexError:
-            raise IndexError("WIND: New Entry - Check Page Source at weather.com") 
+          raise IndexError("WIND: New Entry - Check Page Source at weather.com") 
     
     # dew
+  try:
+    dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
+  except IndexError:
     try:
-      dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
+      dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
     except IndexError:
       try:
-        dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
+        dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--23DP5')
       except IndexError:
         try:
-          dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--23DP5')
+          dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
         except IndexError:
           try:
-            dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
-          except IndexError:
-            try:
-              dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
-            except:
-              raise IndexError("DEW: New Entry - Check Page Source at weather.com")   
+            dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
+          except:
+            raise IndexError("DEW: New Entry - Check Page Source at weather.com")   
               
               
   dew_point = dew[3].span.text              
