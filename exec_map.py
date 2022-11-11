@@ -206,62 +206,39 @@ def home():
 def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
+
+  temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n")
+  wind_links = ("Wind--windWrapper--1Va1P undefined", "Wind--windWrapper--3Ly7c undefined", "Wind--windWrapper--Ps7cP undefined", "Wind--windWrapper--3aqXJ undefined")
+  dew_links = ('ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx', 'WeatherDetailsListItem--wxData--kK35q', 'WeatherDetailsListItem--wxData--23DP5', 'WeatherDetailsListItem--wxData--2bzvn', 'WeatherDetailsListItem--wxData--2s6HT')
   
-  # temperature
-  try:
-    temperature = soup.find(class_="TodayDetailsCard--feelsLikeTempValue--2aogo")
-  except IndexError:
-    try:
-      temperature = soup.find(class_="CurrentConditions--tempValue--MHmYY")
-    except IndexError:
-      try:
-        temperature = soup.find(class_="CurrentConditions--tempValue--1RYJJ")
-      except IndexError:
-        try:
-          temperature = soup.find(class_="CurrentConditions--tempValue--3a50n")
-        except IndexError:
-          raise IndexError("TEMPERATURE: New Entry - Check Page Source at weather.com")
-  
-  # wind 
-  try:
-    wind = soup.find(class_="Wind--windWrapper--1Va1P undefined")
-  except IndexError:
-    try:
-      wind = soup.find(class_="Wind--windWrapper--3Ly7c undefined")
-    except IndexError:
-      try:
-        wind = soup.find(class_="Wind--windWrapper--Ps7cP undefined")
-      except IndexError:
-        try:
-          wind = soup.find(class_="Wind--windWrapper--3aqXJ undefined")
-        except IndexError:
-          raise IndexError("WIND: New Entry - Check Page Source at weather.com") 
-    
-    # dew
-  try:
-    dew = soup.find_all('div', "ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx")
-    dew_point = dew[3].span.text
-  except IndexError:
-    try:
-      dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--kK35q')
-      dew_point = dew[3].span.text
-    except IndexError:
-      try:
-        dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--23DP5')
-        dew_point = dew[3].span.text
-      except IndexError:
-        try:
-          dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2bzvn')
-          dew_point = dew[3].span.text
-        except IndexError:
-          try:
-            dew = soup.find_all('div', 'WeatherDetailsListItem--wxData--2s6HT')
-            dew_point = dew[3].span.text
-          except:
-            raise IndexError("DEW: New Entry - Check Page Source at weather.com")   
+  temperature = None
+  wind = None
+  dew = []
+
+  for i in temperature_links:
+    temperature = soup.find(class_=i)
+    if temperature != None:
+      break
+
+  for i in wind_links:
+    wind = soup.find(class_=i)
+    if wind != None:
+      break
+
+  for i in dew_links:
+    dew = soup.find_all('div', i)
+    if dew != []:
+      break
+
+  if temperature == None:
+    raise IndexError("TEMPERATURE: New Entry - Check Page Source at weather.com") 
+  if wind == None:
+    raise IndexError("WIND: New Entry - Check Page Source at weather.com") 
+  if dew == []:
+    raise IndexError("DEW: New Entry - Check Page Source at weather.com") 
               
               
-  #dew_point = dew[3].span.text              
+  dew_point = dew[3].span.text              
   wind_speed = ''
   pos = 0
 
@@ -285,6 +262,7 @@ def scraper(city, url):
   wind_speed = round(wind_speed / 2.237)
   dew_value = round((dew_value - 32) / 1.8, 2)
   return temperature_value, wind_speed, dew_value
+
 def predict_model(temperature, wind, dew):
   clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)  # For Keras
   prediction = clf.predict([[temperature, wind, dew]])
@@ -311,4 +289,5 @@ if __name__ == "__main__":
     'high': 0.60,
     'very_high': 0.70
   }
+  
 home()
