@@ -9,7 +9,8 @@ The scope of this project is to create a real-time prediction model for wildfire
 
 ## Description
 
-Almost 53.983 conflagrations occurred in Greece between 1980 and 2016 and for Greece this is a major and chronic issue. We are all interested in our forests especially during the last years that climate change causes several problems to our lives. The model will use appropriate data to predict real-time probability of wildfires in each district of Greece. 
+The Application wil use a model which will use appropriate data to predict real-time probability of wildfires in each district of Greece. 
+Almost 53.983 conflagrations occurred in Greece between 1980 and 2016 and for Greece this is a major and chronic issue. We are all interested in our forests especially during the last years that climate change causes several problems to our lives. 
 
 ## Getting Started
 
