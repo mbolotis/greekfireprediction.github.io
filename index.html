@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Link for BU: https://html5up.net/hyperspace
+-->
+<html>
+	<head>
+		<title>PREFIG</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+		<link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="assets/icon/favicon.ico" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro" font-size="0.8em">Home</a></li>
+							<li><a href="#one">Scope</a></li>
+							<li><a href="#two">FAQ</a></li>
+							<li><a href="#three">Contacts</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Fire Prediction for Greece</h1>
+								<p>
+									<b>Navigate to the dynamic map which presents the Risk level of a Fire incident for Greek areas</b>
+								</p>
+							<ul class="actions">
+								<li><a href="map.html" class="button scrolly"><b>Navigate to the map</b></a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" font-size="1.25em" class="wrapper style2 spotlights">
+						<section>
+							<div class="content">
+								<div class="inner"> 
+									<h2>Scope</h2>
+									<style="font-size:1.5em">
+										The scope of this project is to create a near real-time model that predicts the risk of wildfire occurences in Greek area are before they widespread. The outcome of this prediction is classified and presented in a dynamic map on a web application.
+									
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<!-- <section id="two" class="wrapper style3 fade-up"> -->
+					<section id="two" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>FAQs</h2>
+							<div class="features">
+								<section>
+									<span class="icon solid major fa-code"></span>
+									<h2><u>How was it implemented ?</u></h2>
+									<p style="color:white;">
+										<ol style="color:white;">
+											<li style="font-size:20px">Collect past data for fire incidents in Greece as well as temperature, wind speed and dew point</li>
+											<li style="font-size:20px">Create a Machine Learning model based on the collected data</li>
+											<li style="font-size:20px">Scrape the current teperature, wind speed and dew point of each area to feed my model and classify the area according to its risk level</li>
+											<li style="font-size:20px">Fetch the information on a dynamic map</li>
+										</ol>									
+									</p>
+								</section>
+								<section>
+									<span class="icon solid major fas fa-tools"></span>
+									<h2><u>What tools did I used ?</u></h2>
+									<p style="color:white; font-size:20px;">
+										Implementation code was written in Python 3 using the following libraries:
+										<ul>
+											<li style="color:white; font-size:20px"><b>Numpy and Pandas:</b> For data processing  </li>
+											<li style="color:white; font-size:20px"><b>Sklearn, Tensorflow, Keras:</b> For implementing the various machine learning algorithms </li>
+											<li style="color:white; font-size:20px"><b>Folium:</b> To visualize the results on a dynamic map </li>
+											<li style="color:white; font-size:20px"><b>BeautifulSoup and Requests:</b> For the web scraping process </li>
+										</ul>									
+									</p>
+								</section>								
+								<section>
+									<span class="icon solid major fas fa-info-circle"></span>
+									<h2><u>Details about the project</u></h2>
+									<p style="color:white; font-size:20px;">
+										The aim of this study is to exploit existing free to use data in order to train machine learning models to predict the risk level of fire incidents
+										Our hypotheses is that by collecting historical weather data as well as fire incidents from the web, we can combine them and use them to create machine learning models
+										The model can then be used in real-time to provide a risk level of fire
+				  					</p>
+								</section>
+								<section>
+									<span class="icon solid major fa-cog"></span>
+									<h2><u>How it works?</u></h2>
+									<p style="color:white; font-size:20px;">
+										Based on the machine learning model that we have already created, we collect the current teperature, wind speed and dew point of each area and predict the risk level of a fire incident.
+									</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<div class="split style1">
+								<section>
+									<ul class="contact">
+										<li style="display:inline-block;">
+											<h3>Email:</h3><a href="mailto:michael-94@windowslive.com">michael-94@windowslive.com</a>
+										</li>
+										<li>
+											<h3>
+											<a href="#" class="icon brands fa-linkedin"><span class="label">GitHub</span></a>
+												<a href="https://www.linkedin.com/in/michael-bolotis/" target="_blank">LinkedIn</a>
+											</h3>
+										</li>
+										<li>
+											<h3>
+											<a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a>
+												<a href="https://github.com/mbolotis" target="_blank">GitHub</a>
+											</h3>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
