@@ -197,7 +197,7 @@ def home():
                   color='darkred', tooltip=f"{c_city}: {'Very High Risk'}").add_to(m)
       #folium.LayerControl().add_to(m)
   #m.save('/home/runner/work/bet-scaper/bet-scaper/sa_map.html')
-  m.save('index.html')
+  m.save('map.html')
   
   #repo.git.add('my_map.html')
   #repo.git.commit('-m', 'Update map')
