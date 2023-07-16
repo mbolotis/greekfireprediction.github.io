@@ -15,7 +15,7 @@ def home():
       'ANDRAVIDA',
       'ARTA',
       'ATTICA',
-      'CHALKIDIKI',
+      'THESSALONIKI',
       'CHANIA',
       'CHIOS',
       'CYCLADES ISLANDS',
