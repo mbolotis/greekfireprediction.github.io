@@ -24,7 +24,7 @@
 		<link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="assets/icon/favicon.ico" type="image/x-icon">
 	</head>
-	<body class="is-preload" style="font-family:consolas">
+	<body class="is-preload" style="font-family:Lucida Sans Unicode;">
 
 		<!-- Sidebar -->
 			<section id="sidebar">
@@ -46,25 +46,24 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1 style="font-family:consolas; text-align:center">FiRadar - Greece</h1><br>
-							<h2 style="font-family:consolas;">A tool that predicts near real-time the risk level of wildfires in Greek areas</h2>
-								<!--<p>
-									Navigate to the dynamic map which shows the Risk level of a Fire incident for Greek areas
-								</p> -->
+							<h1 style="text-align:center">FiRadar - Greece</h1><br>
+							<h2>A tool that predicts the risk level of wildfires in Greek areas</h2>
 							<ul class="actions">
-								<li><a href="map.html" class="button scrolly">Navigate to the map  <i class="fas fa-external-link-alt"></i></a></li>
+								<li><b><a href="map.html" class="button scrolly">Navigate to the map  <i class="fas fa-external-link-alt"></i></a></b></li>
 							</ul>
 						</div>
 					</section>
 
 				<!-- One -->
-					<section id="one" font-size="1.25em" class="wrapper style2 spotlights">
+					<section id="one" class="wrapper style2 spotlights">
 						<section>
 							<div class="content">
 								<div class="inner"> 
 									<h2>Scope</h2>
-										<b>FiRadar</b> is a fire prevention application that continuously monitors Greek areas in near real-time, providing up-to-date information regarding their risk level.<br>
-										<b>FiRadar</b> equips decision-makers with valuable insights to act proactively regarding fire prevention and resource allocation. By leveraging advanced analytics, Machine Learning, Artificial Intelligence algorithms and visualization tools, the application assists in developing effective fire management strategies and improving emergency response. 								</div>
+										<p style="color:white; font-size:20px;">
+											<b>FiRadar</b> is a fire prevention application that continuously monitors areas in Greece in near real-time, providing up-to-date information regarding their risk level.
+											<br><b>FiRadar</b> empowers decision-makers with valuable insights to take proactive measures in fire prevention and resource allocation. By leveraging advanced analytics, machine learning, artificial intelligence algorithms, and visualization tools, the application assists in developing effective fire management strategies and enhancing emergency response.
+										</p>
 							</div>
 						</section>
 					</section>
@@ -73,48 +72,50 @@
 					<!-- <section id="two" class="wrapper style3 fade-up"> -->
 					<section id="two" class="wrapper style2 fade-up">
 						<div class="inner">
-							<h2>FAQs</h2>
+							<h2>FAQ</h2>
 							<div class="features">
+								<section>
+									<span class="icon solid major fa-cog"></span>
+									<h2><u>How it works ?</u></h2>
+										<ul>
+											<li style="color:white; font-size:20px">Retrieve weather data for each selected area.</li>
+											<li style="color:white; font-size:20px">Input the data into the Artificial Neural Network model we have developed. </li>
+											<li style="color:white; font-size:20px">The model generates the fire risk level for each area.</li>
+											<li style="color:white; font-size:20px">Update the map based on the results and categorize the cities into four risk classes  </li>
+											<li style="color:white; font-size:20px">The entire process is automated and repeated every four hours. </li>
+										</ul>
+								</section>
 								<section>
 									<span class="icon solid major fa-code"></span>
 									<h2><u>How was it implemented ?</u></h2>
 									<p style="color:white;">
 										<ol style="color:white;">
 											<li style="font-size:20px">Collect past data for fire incidents in Greece as well as temperature, wind speed and dew point</li>
-											<li style="font-size:20px">Create a Machine Learning model based on the collected data</li>
-											<li style="font-size:20px">Scrape the current teperature, wind speed and dew point of each area to feed my model and classify the area according to its risk level</li>
-											<li style="font-size:20px">Fetch the information on a dynamic map</li>
+											<li style="font-size:20px">Develop a Artificial Neural Network model using the collected data.</li>
+											<li style="font-size:20px">Scrape the current temperature, wind speed, and dew point for each area to input into the model and classify the areas based on their risk level.</li>
+											<li style="font-size:20px">Display the information on a dynamic map.</li>
 										</ol>									
 									</p>
 								</section>
 								<section>
 									<span class="icon solid major fas fa-tools"></span>
-									<h2><u>What tools did I used ?</u></h2>
+									<h2><u>Which tools it uses ?</u></h2>
 									<p style="color:white; font-size:20px;">
-										Implementation code was written in Python 3 using the following libraries:
+										Implementation code was written in Python 3.7 using the following libraries:
 										<ul>
-											<li style="color:white; font-size:20px"><b>Numpy and Pandas:</b> For data processing  </li>
-											<li style="color:white; font-size:20px"><b>Sklearn, Tensorflow, Keras:</b> For implementing the various machine learning algorithms </li>
-											<li style="color:white; font-size:20px"><b>Folium:</b> To visualize the results on a dynamic map </li>
-											<li style="color:white; font-size:20px"><b>BeautifulSoup and Requests:</b> For the web scraping process </li>
+											<li style="color:white; font-size:20px"><b>Numpy and Pandas:</b> For data processing.  </li>
+											<li style="color:white; font-size:20px"><b>Sklearn, Tensorflow, Keras:</b> For implementing various machine learning algorithms. </li>
+											<li style="color:white; font-size:20px"><b>Folium:</b> To visualize the results on a dynamic map. </li>
+											<li style="color:white; font-size:20px"><b>BeautifulSoup and Requests:</b> For the web scraping process. </li>
 										</ul>									
 									</p>
-								</section>								
+								</section>
 								<section>
 									<span class="icon solid major fas fa-info-circle"></span>
 									<h2><u>Details about the project</u></h2>
 									<p style="color:white; font-size:20px;">
-										The aim of this study is to exploit existing free to use data in order to train machine learning models to predict the risk level of fire incidents
-										Our hypotheses is that by collecting historical weather data as well as fire incidents from the web, we can combine them and use them to create machine learning models
-										The model can then be used in real-time to provide a risk level of fire
+										We gathered historical data on wildfires that have occurred in Greece, along with weather data. We employed various data mining techniques to convert the data into valuable information. Using the collected data, we developed multiple Machine Learning models, and after careful evaluation, we opted to utilize the Artificial Neural Network model, which yielded the most promising results. To ensure up-to-date information, we performed Web Scraping to retrieve current weather data for each city, which was then fed into the model. The model's outcomes are classified into four risk classes, and the dynamic map is updated every four hours.
 				  					</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h2><u>How it works?</u></h2>
-									<p style="color:white; font-size:20px;">
-										Based on the machine learning model that we have already created, we collect the current teperature, wind speed and dew point of each area and predict the risk level of a fire incident.
-									</p>
 								</section>
 							</div>
 						</div>
@@ -123,23 +124,23 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
+							<h2>Contacts</h2>
 							<div class="split style1">
 								<section>
 									<ul class="contact">
-										<li style="display:inline-block;">
-											<h3>Email:</h3><a href="mailto:michael-94@windowslive.com">michael-94@windowslive.com</a>
-										</li>
 										<li>
 											<h3>
-											<a href="#" class="icon brands fa-linkedin"><span class="label">GitHub</span></a>
-												<a href="https://www.linkedin.com/in/michael-bolotis/" target="_blank">LinkedIn</a>
+												<a href="mailto:michael-94@windowslive.com" class="fa fa-envelope" aria-hidden="true"> Email</a>
 											</h3>
 										</li>
 										<li>
 											<h3>
-											<a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a>
-												<a href="https://github.com/mbolotis" target="_blank">GitHub</a>
+												<a href="https://www.linkedin.com/in/michael-bolotis/" class="icon brands fa-linkedin" target="_blank"> LinkedIn</a>
+											</h3>
+										</li>
+										<li>
+											<h3>
+												<a href="https://github.com/mbolotis" class="icon brands fa-github" target="_blank"> GitHub</a>
 											</h3>
 										</li>
 									</ul>
