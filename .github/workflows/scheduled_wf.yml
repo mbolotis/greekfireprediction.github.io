@@ -17,6 +17,7 @@ jobs:
 
       - name: Setup Env
         id: try_1
+        continue-on-error: True
         run: |
           retries=3
           until_failure=0
