@@ -5,7 +5,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 	Link for BU: https://html5up.net/hyperspace
 -->
-<html>
+<html lang="el">
 	<head>
 		<title>FiRadar: Real-Time Fire Prevention Monitoring in Greece</title>
 		<!-- Google tag (gtag.js) -->
@@ -24,33 +24,59 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 		<link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="assets/icon/favicon.ico" type="image/x-icon">
+		<!-- Custom CSS styles for flag icons -->
+
 	</head>
 	<body class="is-preload" style="font-family:Lucida Sans Unicode;">
-
+					<!--
+					<header style="top:0; right:0; position:absolute;">
+						<div id="language-toggle">
+							<a href="map.html" id="english-flag" class="flag-icon" data-lang="en">
+								<img src="english-flag.png" alt="English Flag" width="20px" height="20px">
+							</a>
+							<u><a href="map.html" id="greek-flag" class="flag-icon" data-lang="el"></u>
+								<u><img src="greek-flag.png" alt="Greek Flag" width="20px" height="20px"></u>
+							</a>
+						</div>
+					</header>
+					-->
 		<!-- Sidebar -->
 			<section id="sidebar">
+
 				<div class="inner">
 					<nav>
 						<ul>
-							<li><a href="#intro">Home</a></li>
-							<li><a href="#one">Scope</a></li>
+							<li><a href="#intro">Αρχικη</a></li>
+							<li><a href="#one">Σκοπος</a></li>
 							<li><a href="#two">FAQ</a></li>
-							<li><a href="#three">Contacts</a></li>
+							<li><a href="#three">Επικοινωνια</a></li>
 						</ul>
 					</nav>
 				</div>
 			</section>
-
+	
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<header style="text-align:center;">
+							<div id="language-toggle">
+								<a href="index_en.html" id="english-flag" class="flag-icon" data-lang="en">
+									<img src="english-flag.png" alt="English Flag" width="20px" height="20px">
+								</a>
+								<u><a href="#" id="greek-flag" class="flag-icon" data-lang="el"></u>
+									<u><img src="greek-flag.png" alt="Greek Flag" width="30px" height="30px" text-decoration="underline"></u>
+								</a>
+							</div>
+						</header>
 						<div class="inner">
-							<h1 style="text-align:center">FiRadar - Greece</h1><br>
-							<h2>A tool that predicts the risk level of wildfires in Greek regions</h2>
+							<h1 style="text-align:center">FiRadar - Greece</h1>
+							<br>
+							<h2>Ένα εργαλείο που προβλέπει το επίπεδο κινδύνου των δασικών πυρκαγιών στην ελληνική επικράτεια</h2>
+				
 							<ul class="actions">
-								<li><b><a href="map.html" class="button scrolly">Navigate to the map  <i class="fas fa-external-link-alt"></i></a></b></li>
+								<li><b><a href="map.html" class="button scrolly">Περιηγησου στο χαρτη <i class="fas fa-external-link-alt"></i></a></b></li>
 							</ul>
 						</div>
 					</section>
@@ -60,10 +86,10 @@
 						<section>
 							<div class="content">
 								<div class="inner"> 
-									<h2>Scope</h2>
+									<h2>Σκοπός</h2>
 										<p style="color:white; font-size:20px;">
-											<b>FiRadar</b> is a fire prevention application that continuously monitors areas in Greece in near real-time, providing up-to-date information regarding their risk level.
-											<br><b>FiRadar</b> empowers decision-makers with valuable insights to take proactive measures in fire prevention and resource allocation. By leveraging advanced analytics, machine learning, artificial intelligence algorithms and visualization tools, the application assists in developing effective fire management strategies and enhancing emergency response.
+											Το <b>FiRadar</b> είναι μια εφαρμογή πυροπροστασίας που παρακολουθεί συνεχώς επιλεγμένες περιοχές στην Ελλάδα σε σχεδόν πραγματικό χρόνο, παρέχοντας ενημερωμένες πληροφορίες σχετικά με το επίπεδο επικινδυνότητάς τους.
+											<br>Το <b>FiRadar</b> βοηθά τους υπεύθυνους λήψης αποφάσεων με πολύτιμες γνώσεις να λαμβάνουν προληπτικά μέτρα για την πρόληψη των πυρκαγιών και την κατανομή των πόρων. Αξιοποιώντας προηγμένες αναλύσεις, μηχανική μάθηση, αλγόριθμους τεχνητής νοημοσύνης και εργαλεία οπτικοποίησης, η εφαρμογή βοηθά στην ανάπτυξη αποτελεσματικών στρατηγικών διαχείρισης πυρκαγιάς και στη βελτίωση της απόκρισης έκτακτης ανάγκης.
 										</p>
 							</div>
 						</section>
@@ -73,49 +99,49 @@
 					<!-- <section id="two" class="wrapper style3 fade-up"> -->
 					<section id="two" class="wrapper style2 fade-up">
 						<div class="inner">
-							<h2>FAQ</h2>
+							<h2>Συχνές Ερωτήσεις</h2>
 							<div class="features">
 								<section>
 									<span class="icon solid major fa-cog"></span>
-									<h2><u>How it works ?</u></h2>
+									<h2><u>Πως λειτουργεί ?</u></h2>
 										<ul>
-											<li style="color:white; font-size:20px">Retrieve weather data for each selected area. </li>
-											<li style="color:white; font-size:20px">Input the data into the developed Artificial Neural Network model. </li>
-											<li style="color:white; font-size:20px">The model generates the fire risk level for each area.</li>
-											<li style="color:white; font-size:20px">Update the map based on the results and categorize the cities into four risk classes.  </li>
-											<li style="color:white; font-size:20px">The entire process is automated and repeated every four hours. </li>
+											<li style="color:white; font-size:20px">Ανάκτηση δεδομένων καιρού για κάθε επιλεγμένη περιοχή.. </li>
+											<li style="color:white; font-size:20px">Εισαγωγή των δεδομένων στο αναπτυγμένο μοντέλο Τεχνητού Νευρωνικού Δικτύου. </li>
+											<li style="color:white; font-size:20px">Το μοντέλο υπολογίζει το επίπεδο κινδύνου πυρκαγιάς για κάθε περιοχή.</li>
+											<li style="color:white; font-size:20px">Ενημέρωση του χάρτη με βάσει των αποτελεσμάτων και κατηγοριοποίηση των πόλεων σε τέσσερις κατηγορίες κινδύνου.  </li>
+											<li style="color:white; font-size:20px">Η διαδικασία είναι αυτοματοποιημένη και επανεκτελείται κάθε τέσσερις ώρες. </li>
 										</ul>
 								</section>
 								<section>
 									<span class="icon solid major fa-code"></span>
-									<h2><u>How was it implemented ?</u></h2>
+									<h2><u>Πως υλοποιήθηκε ?</u></h2>
 									<p style="color:white;">
 										<ol style="color:white;">
-											<li style="font-size:20px">Collect past data for fire incidents in Greece as well as temperature, wind speed and dew point.</li>
-											<li style="font-size:20px">Develop an Artificial Neural Network model using the collected data.</li>
-											<li style="font-size:20px">Scrape the current temperature, wind speed, and dew point for each area to input into the model and classify the areas based on their risk level.</li>
-											<li style="font-size:20px">Display the information on a dynamic map.</li>
+											<li style="font-size:20px">Συλλέχθηκαν δεδομένα για περιστατικά πυρκαγιάς στην Ελλάδα καθώς και θερμοκρασία, ταχύτητα ανέμου και σημείο δρόσου.</li>
+											<li style="font-size:20px">Αναπτύχθηκε ένα μοντέλο τεχνητού νευρωνικού δικτύου χρησιμοποιώντας τα δεδομένα που συλλέχθηκαν.</li>
+											<li style="font-size:20px">Αντλείται η τρέχουσα θερμοκρασία, η ταχύτητα του ανέμου και το σημείο δρόσου για κάθε περιοχή για εισαγωγή στο μοντέλο και ταξινομούνται οι περιοχές με βάση το επίπεδο κινδύνου τους.</li>
+											<li style="font-size:20px">Εμφάνιση των πληροφοριών σε έναν δυναμικό χάρτη.</li>
 										</ol>									
 									</p>
 								</section>
 								<section>
 									<span class="icon solid major fas fa-tools"></span>
-									<h2><u>Which tools does it use ?</u></h2>
+									<h2><u>Ποια εργαλεία χρησιμοποιήθηκαν ?</u></h2>
 									<p style="color:white; font-size:20px;">
-										Implementation code was written in Python 3.8 using the following libraries:
+										Ο κώδικας υλοποίησης γράφτηκε στην Python 3.8 χρησιμοποιώντας τις ακόλουθες βιβλιοθήκες:
 										<ul>
-											<li style="color:white; font-size:20px"><b>Numpy and Pandas:</b> For data processing.  </li>
-											<li style="color:white; font-size:20px"><b>Sklearn, Tensorflow, Keras:</b> For implementing various machine learning algorithms. </li>
-											<li style="color:white; font-size:20px"><b>Folium:</b> To visualize the results on a dynamic map. </li>
-											<li style="color:white; font-size:20px"><b>BeautifulSoup and Requests:</b> For the web scraping process. </li>
+											<li style="color:white; font-size:20px"><b>Numpy και Pandas:</b> Για επεξεργασία δεδομένων.  </li>
+											<li style="color:white; font-size:20px"><b>Sklearn, Tensorflow, Keras:</b> Για την εφαρμογή διαφόρων αλγορίθμων μηχανικής μάθησης. </li>
+											<li style="color:white; font-size:20px"><b>Folium:</b> Για την απεικόνιση των αποτελεσμάτων σε έναν δυναμικό χάρτη. </li>
+											<li style="color:white; font-size:20px"><b>BeautifulSoup και Requests:</b> Για τη διαδικασία απόξεσης ιστού. </li>
 										</ul>									
 									</p>
 								</section>
 								<section>
 									<span class="icon solid major fas fa-info-circle"></span>
-									<h2><u>Details</u></h2>
+									<h2><u>Στοιχεία</u></h2>
 									<p style="color:white; font-size:20px;">
-										Historical data on wildfires that occurred in Greece, along with weather data, was collected. Various data mining techniques were employed to convert the data into valuable information. Multiple Machine Learning models were developed and carefully evaluated, leading to the selection of the Artificial Neural Network model, which showed the most promising results. To maintain up-to-date information, current weather data for each city is retrieved through the Web Scraping process and fed into the model. The model's outcomes are classified into four risk classes, and the dynamic map is updated every four hours.
+										Συλλέχθηκαν ιστορικά στοιχεία για τις πυρκαγιές που εκδηλώθηκαν στην Ελλάδα, μαζί με καιρικά δεδομένα. Χρησιμοποιήθηκαν διάφορες τεχνικές εξόρυξης δεδομένων για τη μετατροπή των δεδομένων σε πολύτιμες πληροφορίες. Αναπτύχθηκαν και αξιολογήθηκαν προσεκτικά πολλαπλά μοντέλα Μηχανικής Μάθησης, οδηγώντας στην επιλογή του μοντέλου Τεχνητού Νευρωνικού Δικτύου, το οποίο έδειξε τα πιο ελπιδοφόρα αποτελέσματα. Για τη διατήρηση ενημερωμένων πληροφοριών, τα τρέχοντα δεδομένα καιρού για κάθε πόλη ανακτώνται μέσω της διαδικασίας Web Scraping και τροφοδοτούνται στο μοντέλο. Τα αποτελέσματα του μοντέλου ταξινομούνται σε τέσσερις κατηγορίες κινδύνου και ο δυναμικός χάρτης ενημερώνεται κάθε τέσσερις ώρες.
 									</p>
 								</section>
 							</div>
@@ -125,7 +151,7 @@
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up"><br>
 						<div class="inner">
-							<h2>Contacts</h2>
+							<h2>Επικοινωνία</h2>
 							<div class="split style1">
 								<section>
 									<ul class="contact">
@@ -152,13 +178,13 @@
 
 			</div>
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
