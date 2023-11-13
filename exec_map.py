@@ -55,7 +55,7 @@ def home():
       'VEROIA',
       'XANTHI',
       'ZAKINTHOS',
-      'EUBOEA',
+      'EVIA',
       'RHODOS',
       'SERRES',
       'ALEXANDROUPOLI',
