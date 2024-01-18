@@ -281,6 +281,7 @@ if __name__ == "__main__":
            min_zoom=6,
            max_zoom=6,
            no_touch=True,
+           doubleClickZoom=False,
            scrollWheelZoom=False,
            dragging=False)
   risk_levels = {
