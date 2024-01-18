@@ -278,6 +278,7 @@ if __name__ == "__main__":
       break
   m = folium.Map(location=[37.97025, 24.12247],
            zoom_start=6,
+           width=100,
            no_touch=True,
            zoom_control=False,
            doubleClickZoom=False,
