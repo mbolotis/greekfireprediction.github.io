@@ -181,7 +181,7 @@ def home():
       print(c_city, temperature, wind, dew, probability)
       # probability = 10
       if probability <= risk_levels.get('very_low'):
-        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.3, fill_color='lightgreen',
+        folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.3, fill_color='darkgreen',
                   color='darkgreen', tooltip=f"{c_city}: {'Very Low Risk'}").add_to(m)
       elif probability <= risk_levels.get('low'):
         folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.6, fill_color='darkgreen', 
