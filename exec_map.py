@@ -277,7 +277,7 @@ if __name__ == "__main__":
       country = i
       break
   m = folium.Map(location=[37.97025, 24.12247],
-           zoom_start=6,
+           zoom_start=7,
            no_touch=True,
            zoom_control=False,
            doubleClickZoom=False,
