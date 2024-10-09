@@ -207,7 +207,7 @@ def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
 
-  temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n")
+  temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n", "CurrentConditions--tempValue--zUBSz")
   wind_links = ("Wind--windWrapper--1Va1P undefined", "Wind--windWrapper--3Ly7c undefined", "Wind--windWrapper--Ps7cP undefined", "Wind--windWrapper--3aqXJ undefined")
   dew_links = ('ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx', 'WeatherDetailsListItem--wxData--kK35q', 'WeatherDetailsListItem--wxData--23DP5', 'WeatherDetailsListItem--wxData--2bzvn', 'WeatherDetailsListItem--wxData--2s6HT')
   
