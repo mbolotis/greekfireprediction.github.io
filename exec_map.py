@@ -179,7 +179,6 @@ def home():
       probability = predict_model(temperature, wind, dew)
       #probability = probability[0][1]  # For SKlearn
       print(c_city, temperature, wind, dew, probability)
-      # probability = 10
       if probability <= risk_levels.get('very_low'):
         folium.CircleMarker(location=c_location, radius=12, fill=True, fill_opacity=0.3, fill_color='darkgreen',
                   color='darkgreen', tooltip=f"{c_city}: {'Very Low Risk'}").add_to(m)
@@ -199,10 +198,6 @@ def home():
   #m.save('/home/runner/work/bet-scaper/bet-scaper/sa_map.html')
   m.save('map.html')
   
-  #repo.git.add('my_map.html')
-  #repo.git.commit('-m', 'Update map')
-  #origin = repo.remote(name='origin')
-  #origin.push()
 def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
@@ -266,7 +261,6 @@ def scraper(city, url):
 def predict_model(temperature, wind, dew):
   clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)  # For Keras
   prediction = clf.predict([[temperature, wind, dew]])
-  #clf = pickle.load(open('C:\\Users\\hppc\\Desktop\\GitHub\\standalone_wildfireprediction\\models\\naive_bayes_gb.pkl', 'rb'))  # For sklearn
   #prediction = clf.predict_proba([[temperature, wind, dew]])
   return prediction
 if __name__ == "__main__":
