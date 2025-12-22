@@ -202,12 +202,12 @@ def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
   
-for tag in soup.find_all(text=lambda t: "°" in t):
-  parent = tag.parent
-  print("Tag:", parent.name)
-  print("Classes:", parent.get("class"))
-  print("Text:", parent.text)
-  print("-" * 40)
+  for tag in soup.find_all(text=lambda t: "°" in t):
+    parent = tag.parent
+    print("Tag:", parent.name)
+    print("Classes:", parent.get("class"))
+    print("Text:", parent.text)
+    print("-" * 40)
 
   temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n", "CurrentConditions--tempValue--zUBSz")
   wind_links = ("Wind--windWrapper--1Va1P undefined", "Wind--windWrapper--3Ly7c undefined", "Wind--windWrapper--Ps7cP undefined", "Wind--windWrapper--3aqXJ undefined", "Wind--windWrapper--NsCjc undefined")
