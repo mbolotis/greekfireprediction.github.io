@@ -8,6 +8,7 @@ import pickle
 import branca
 import tensorflow
 import lxml
+import numpy as np
 
 def home():
   city = ['AGRINION',
@@ -225,8 +226,6 @@ def scraper(city, url):
     if dew != []:
       break
 
-  if wind == None:
-    raise IndexError("WIND: New Entry - Check Page Source at weather.com")
   if temperature == None:
     print(temperature)
     raise IndexError("TEMPERATURE: New Entry - Check Page Source at weather.com") 
@@ -254,6 +253,7 @@ def scraper(city, url):
         break
     else:
       pos += 1
+
   temperature_value = float(temperature.text[:-1])
   dew_value = float(dew_point[:-1])
   temperature_value = round((temperature_value - 32) / 1.8, 2)
@@ -262,9 +262,12 @@ def scraper(city, url):
   return temperature_value, wind_speed, dew_value
 
 def predict_model(temperature, wind, dew):
+  print([[temperature, wind, dew]])
+  x = np.array([[temperature, wind, dew]], dtype=np.float32)
   clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)  # For Keras
-  prediction = clf.predict([[temperature, wind, dew]])
+  # prediction = clf.predict([[temperature, wind, dew]])
   #prediction = clf.predict_proba([[temperature, wind, dew]])
+  prediction = clf.predict(x)
   return prediction
 if __name__ == "__main__":
   with open('world-countries.json') as handle:
