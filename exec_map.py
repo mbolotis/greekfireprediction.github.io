@@ -202,7 +202,7 @@ def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
   
-  for tag in soup.find_all(text=lambda t: "°" in t):
+  for tag in soup.find_all(string=lambda t: "°" in t):
     parent = tag.parent
     print("Tag:", parent.name)
     print("Classes:", parent.get("class"))
