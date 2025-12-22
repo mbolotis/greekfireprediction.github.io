@@ -225,6 +225,8 @@ def scraper(city, url):
     if dew != []:
       break
 
+  if wind == None:
+    raise IndexError("WIND: New Entry - Check Page Source at weather.com")
   if temperature == None:
     print(temperature)
     raise IndexError("TEMPERATURE: New Entry - Check Page Source at weather.com") 
