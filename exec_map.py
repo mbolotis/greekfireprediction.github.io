@@ -201,15 +201,8 @@ def home():
 def scraper(city, url):
   html_text = requests.get(url).text
   soup = BeautifulSoup(html_text, 'lxml')
-  
-  for tag in soup.find_all(string=lambda t: "°" in t):
-    parent = tag.parent
-    print("Tag:", parent.name)
-    print("Classes:", parent.get("class"))
-    print("Text:", parent.text)
-    print("-" * 40)
 
-  temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n", "CurrentConditions--tempValue--zUBSz", "TodayDetailsCard--feelsLikeTempValue--8WgHV")
+  temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n", "CurrentConditions--tempValue--zUBSz", "TodayDetailsCard--feelsLikeTempValue--8WgHV", "DetailsSummary--tempValue--XM5sZ")
   wind_links = ("Wind--windWrapper--1Va1P undefined", "Wind--windWrapper--3Ly7c undefined", "Wind--windWrapper--Ps7cP undefined", "Wind--windWrapper--3aqXJ undefined", "Wind--windWrapper--NsCjc undefined")
   dew_links = ('ListItem--listItem--1r7mf WeatherDetailsListItem--WeatherDetailsListItem--3w7Gx', 'WeatherDetailsListItem--wxData--kK35q', 'WeatherDetailsListItem--wxData--23DP5', 'WeatherDetailsListItem--wxData--2bzvn', 'WeatherDetailsListItem--wxData--2s6HT', "WeatherDetailsListItem--wxData--lW-7H")
   
@@ -219,7 +212,6 @@ def scraper(city, url):
 
   for i in temperature_links:
     temperature = soup.find(class_=i)
-    print(temperature)
     if temperature != None:
       break
 
