@@ -200,7 +200,8 @@ def home():
   m.save('map.html')
   
 def scraper(city, url):
-  html_text = requests.get(url).text
+  #html_text = requests.get(url).text
+  html_text = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}).text
   soup = BeautifulSoup(html_text, 'lxml')
 
   temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n", "CurrentConditions--tempValue--zUBSz", "TodayDetailsCard--feelsLikeTempValue--8WgHV", "DetailsSummary--tempValue--XM5sZ")
