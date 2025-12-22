@@ -40,29 +40,6 @@ jobs:
             exit 1
           fi
 
-      - name: Setup Env
-        id: try_2
-        if: steps.try_1.outcome == 'failure'
-        run: |
-          retries=3
-          until_failure=0
-          while [ $retries -gt 0 ]; do
-            if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-            python exec_map.py
-            if [ $? -eq 0 ]; then
-              until_failure=0
-              break
-            else
-              retries=$((retries - 1))
-              until_failure=$((until_failure + 1))
-              sleep 10 # Add a delay between retries 
-            fi
-          done
-          if [ $until_failure -gt 0 ]; then
-            echo "Failed after $until_failure attempts."
-            exit 1
-          fi
-
       - name: Git_Upload
         run: |
           git config --global user.email "michael-94@windowslive.com"
