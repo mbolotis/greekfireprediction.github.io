@@ -206,7 +206,7 @@ def scraper(city, url):
   print("TemperatureValue" in html_text)
   print("tempValue" in html_text)
 
-  print(html_text) 
+  print(html_text[:10000000]) 
 
   temperature_links = ("TodayDetailsCard--feelsLikeTempValue--2aogo", "CurrentConditions--tempValue--MHmYY", "CurrentConditions--tempValue--1RYJJ", "CurrentConditions--tempValue--3a50n", "CurrentConditions--tempValue--zUBSz")
   wind_links = ("Wind--windWrapper--1Va1P undefined", "Wind--windWrapper--3Ly7c undefined", "Wind--windWrapper--Ps7cP undefined", "Wind--windWrapper--3aqXJ undefined", "Wind--windWrapper--NsCjc undefined")
