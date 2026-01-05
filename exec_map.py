@@ -8,68 +8,111 @@ import time
 API_KEY = "50a73089557740eb969222141251707"
 
 cities = [
-    'AGRINIO','ALIARTOS','ANDRAVIDA','ARTA','ATTICA','THESSALONIKI','CHANIA','CHIOS',
-    'CYCLADES ISLANDS','DRAMA','EDESSA','ELEFSINA','ORESTIADA','FILIATES','FLORINA',
-    'GREVENA','IRAKLEION','IERAPETRA','IOANNINA','KARDITSA','KARPENISI','KASTORIA',
-    'KATERINI','KAVALA','KEFALONIA','KERKYRA','KILKIS','KOMOTINI','KOS','KOZANI',
-    'LAMIA','LARISA','LEFKADA','METHONI','MYTILINI','NAFPLIO','NEA ANCHIALOS','PATRA',
-    'PREVEZA','RETHYMNO','TRIKALA','TRIPOLI','VEROIA','XANTHI','ZAKYNTHOS','CHALKIDA',
-    'RHODOS','SERRES','ALEXANDROUPOLI','KOSMAS'
+    'AGRINIO',
+    'ALIARTOS',
+    'ANDRAVIDA',
+    'ARTA',
+    'ATTICA',
+    'THESSALONIKI',
+    'CHANIA',
+    'CHIOS',
+    'PAROS',
+    'DRAMA',
+    'EDESSA',
+    'ELEFSINA',
+    'ORESTIADA',
+    'FILIATES',
+    'FLORINA',
+    'GREVENA',
+    'IRAKLEION',
+    'AGIOS NIKOLAOS',
+    'IOANNINA',
+    'KARDITSA',
+    'KARPENISI',
+    'KASTORIA',
+    'KATERINI',
+    'KAVALA',
+    'KEFALONIA',
+    'KERKYRA',
+    'KILKIS',
+    'KOMOTINI',
+    'KOS',
+    'KOZANI',
+    'LAMIA',
+    'LARISA',
+    'LEFKADA',
+    'METHONI',
+    'MYTILINI',
+    'NAFPLIO',
+    'NEA ANCHIALOS',
+    'PATRA',
+    'PREVEZA',
+    'RETHYMNO',
+    'TRIKALA',
+    'TRIPOLI',
+    'VEROIA',
+    'XANTHI',
+    'ZAKYNTHOS',
+    'CHALKIDA',
+    'RHODES',
+    'SERRES',
+    'ALEXANDROUPOLI',
+    'KOSMAS'
 ]
 
 locations = [
-    [38.62139, 21.40778],
-    [38.36667, 23.1],
-    [37.90588, 21.26936],
-    [39.16014, 20.98561],
-    [37.97025, 23.72247],
-    [40.416665, 23.499998],
-    [35.48717, 24.07344],
-    [38.36778, 26.13583],
-    [37.08333, 25.15],
-    [41.15283, 24.1473],
-    [40.8026, 22.04751],
-    [38.04135, 23.54295],
-    [41.433, 26.55],
-    [39.36, 20.19],
-    [40.08452, 21.42744],
-    [39.66486, 20.85189],
-    [40.78197, 21.40981],
-    [40.08452, 21.42744],
-    [35.32969, 25.12985],
-    [35.01186, 25.74234],
-    [39.36485, 21.92191],
-    [38.91218, 21.79836],
-    [40.52165, 21.26341],
-    [40.26956, 22.50608],
-    [40.93959, 24.40687],
-    [38.249999, 20.499998],
-    [39.62069, 19.91975],
-    [40.99302, 22.87433],
-    [41.11917, 25.40535],
-    [36.8499966, 27.2333324],
-    [40.30069, 21.78896],
-    [38.9, 22.43333],
-    [39.643452, 22.413208],
-    [38.7166638, 20.6499974],
-    [37.249999, 21.83333],
-    [39.11, 26.55472],
-    [37.568497726, 22.78749685],
-    [39.28015, 22.81819],
-    [38.24444, 21.73444],
-    [38.95617, 20.7505],
-    [35.36555, 24.48232],
-    [39.55493, 21.76837],
-    [37.50889, 22.37944],
-    [40.52437, 22.20242],
-    [41.13488, 24.888],
-    [37.7999968, 20.749997],
-    [38.499998, 24.0],
-    [36.44083, 28.2225],
-    [41.08499, 23.54757],
-    [40.84995, 25.87644],
-    [37.06, 22.44]
+    [38.62139, 21.40778],  # AGRINIO
+    [38.36667, 23.1],      # ALIARTOS
+    [37.90588, 21.26936],  # ANDRAVIDA
+    [39.16014, 20.98561],  # ARTA
+    [37.97025, 23.72247],  # ATTICA
+    [40.416665, 23.499998],# THESSALONIKI
+    [35.48717, 24.07344],  # CHANIA
+    [38.36778, 26.13583],  # CHIOS
+    [37.08333, 25.15],     # CYCLADES ISLANDS
+    [41.15283, 24.1473],   # DRAMA
+    [40.8026, 22.04751],   # EDESSA
+    [38.04135, 23.54295],  # ELEFSINA
+    [41.433, 26.55],       # ORESTIADA
+    [39.36, 20.19],        # FILIATES
+    [40.78197, 21.40981],  # FLORINA
+    [40.08452, 21.42744],  # GREVENA
+    [35.32969, 25.12985],  # IRAKLEION
+    [35.01186, 25.74234],  # AGIOS NIKOLAOS
+    [39.66486, 20.85189],  # IOANNINA
+    [39.36485, 21.92191],  # KARDITSA
+    [38.91218, 21.79836],  # KARPENISI
+    [40.52165, 21.26341],  # KASTORIA
+    [40.26956, 22.50608],  # KATERINI
+    [40.93959, 24.40687],  # KAVALA
+    [38.249999, 20.499998],# KEFALONIA
+    [39.62069, 19.91975],  # KERKYRA
+    [40.99302, 22.87433],  # KILKIS
+    [41.11917, 25.40535],  # KOMOTINI
+    [36.8499966, 27.2333324], # KOS
+    [40.30069, 21.78896],  # KOZANI
+    [38.9, 22.43333],      # LAMIA
+    [39.643452, 22.413208],# LARISA
+    [38.7166638, 20.6499974], # LEFKADA
+    [37.249999, 21.83333], # METHONI
+    [39.11, 26.55472],     # MYTILINI
+    [37.568497726, 22.78749685], # NAFPLIO
+    [39.28015, 22.81819],  # NEA ANCHIALOS
+    [38.24444, 21.73444],  # PATRA
+    [38.95617, 20.7505],   # PREVEZA
+    [35.36555, 24.48232],  # RETHYMNO
+    [39.55493, 21.76837],  # TRIKALA
+    [37.50889, 22.37944],  # TRIPOLI
+    [40.52437, 22.20242],  # VEROIA
+    [41.13488, 24.888],    # XANTHI
+    [37.7999968, 20.749997], # ZAKYNTHOS
+    [38.499998, 24.0],     # CHALKIDA
+    [36.44083, 28.2225],   # RHODOS
+    [41.08499, 23.54757],  # SERRES
+    [40.84995, 25.87644],  # ALEXANDROUPOLI
+    [37.06, 22.44]         # KOSMAS
 ]
+
 
 risk_levels = {
     'very_low': 0.15,
@@ -118,9 +161,7 @@ def get_weather(city):
 # ==========================
 m = folium.Map(location=[37.97025, 24.12247], zoom_start=6)
 
-for i in range(len(cities)):
-    city = cities[i]
-    loc = locations[i]
+for city, loc in zip(cities, locations):
     time.sleep(2)  # avoid API spam
 
     # Skip specific cities if needed
@@ -140,7 +181,7 @@ for i in range(len(cities)):
         clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)
         probability = clf.predict(x)[0][0]  # adjust depending on model output
 
-        # Add circle to folium map
+        # Determine color and opacity
         if probability <= risk_levels['very_low']:
             color = 'darkgreen'
             opacity = 0.3
@@ -162,6 +203,7 @@ for i in range(len(cities)):
             opacity = 0.8
             label = 'Very High Risk'
 
+        # Add marker to map
         folium.CircleMarker(
             location=loc,
             radius=12,
