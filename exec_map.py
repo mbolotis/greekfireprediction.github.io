@@ -162,8 +162,6 @@ def get_weather(city):
 m = folium.Map(location=[37.97025, 24.12247], zoom_start=6)
 
 for city, loc in zip(cities, locations):
-    time.sleep(2)  # avoid API spam
-
     # Skip specific cities if needed
     if city in ['PREVEZA', 'ELEFSINA', 'VEROIA']:
         continue
