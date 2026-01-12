@@ -156,10 +156,40 @@ def get_weather(city):
 
     return temp_c, wind_ms, dew_c
 
+########################
 # ==========================
 # Main mapping and prediction
 # ==========================
-m = folium.Map(location=[37.97025, 24.12247], zoom_start=6)
+
+greece_bounds = [[34.8, 19.0], [41.8, 26.5]]
+
+m = folium.Map(
+    location=[38.0, 19.0],
+    zoom_start=6,
+    max_bounds=True,      # restrict panning outside bounds
+    min_zoom=6,
+    max_zoom=6,
+    no_touch=True,
+    zoom_control=False,
+    doubleClickZoom=False,
+    scrollWheelZoom=False,
+    dragging=False,
+    tiles='OpenStreetMap' # Esri.WorldPhysical , Esri.WorldTopoMap
+)
+
+# Apply the bounds
+m.fit_bounds([[35.0, 32.0], [42.0, 15.0]])
+
+
+# Optional: add a rectangle to visualize bounds
+#folium.Rectangle(
+#    bounds=greece_bounds,
+#    color='blue',
+#    fill=False,
+#).add_to(m)
+##################################
+
+clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)
 
 for city, loc in zip(cities, locations):
     # Skip specific cities if needed
@@ -176,7 +206,6 @@ for city, loc in zip(cities, locations):
 
         # Predict probability
         x = np.array([[temperature, wind, dew]], dtype=np.float32)
-        clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)
         probability = clf.predict(x)[0][0]  # adjust depending on model output
 
         # Determine color and opacity
