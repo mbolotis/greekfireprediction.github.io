@@ -154,6 +154,9 @@ def get_weather(city):
     wind_mph = hour_data["wind_mph"]
     wind_ms = round(wind_mph / 2.237, 2)
 
+    if wind_ms < 2:
+        wind_ms = 2
+
     return temp_c, wind_ms, dew_c
 
 ########################
