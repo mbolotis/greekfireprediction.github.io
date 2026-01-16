@@ -6,7 +6,7 @@ import tensorflow
 import time
 import os
 
-API_KEY = os.getenv("WEATHERAPI_KEY")
+API_KEY = os.environ["WEATHERAPI_KEY"]
 
 if not API_KEY:
     raise RuntimeError("WEATHERAPI_KEY is not set")
