@@ -8,12 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env:
+      WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
+
     steps:
       - uses: actions/checkout@v2
       
       - name: Set up Python
-        env:
-          WEATHERAPI_KEY: ${{ secrets.WEATHERAPI_KEY }}
+
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
