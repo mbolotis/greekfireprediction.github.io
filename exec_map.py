@@ -176,7 +176,7 @@ m = folium.Map(location=[37.97025, 24.12247],
                scrollWheelZoom=False,
                dragging=False)
 
-m.fit_bounds(greece_bounds)
+#m.fit_bounds(greece_bounds)
 
 ## Load model
 clf = tf.keras.models.load_model('working_model/nn_model_1.h5', compile=False)
