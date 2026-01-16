@@ -2,11 +2,12 @@ import requests
 import folium
 import json
 import numpy as np
-import tensorflow
+import tensorflow as tf
 import time
 import os
 
-API_KEY = os.getenv("WEATHERAPI_KEY")
+## API_KEY = os.getenv("WEATHERAPI_KEY")
+API_KEY = "50a73089557740eb969222141251707"
 
 if not API_KEY:
     raise RuntimeError("WEATHERAPI_KEY is not set")
@@ -68,25 +69,25 @@ locations = [
     [38.62139, 21.40778],  # AGRINIO
     [38.36667, 23.1],      # ALIARTOS
     [37.90588, 21.26936],  # ANDRAVIDA
-    [39.16014, 20.98561],  # ARTA
+    [39.16014, 21.02561],  # ARTA
     [37.97025, 23.72247],  # ATTICA
     [40.416665, 23.499998],# THESSALONIKI
-    [35.48717, 24.07344],  # CHANIA
+    [35.48717, 23.9],  # CHANIA
     [38.36778, 26.13583],  # CHIOS
-    [37.08333, 25.15],     # CYCLADES ISLANDS
-    [41.15283, 24.1473],   # DRAMA
+    [37.08333, 25.15],     # PAROS (displayed as CYCLADES ISLANDS)
+    [41.2883, 24.1473],   # DRAMA
     [40.8026, 22.04751],   # EDESSA
     [38.04135, 23.54295],  # ELEFSINA
-    [41.433, 26.55],       # ORESTIADA
-    [39.36, 20.19],        # FILIATES
+    [41.433, 26.25],       # ORESTIADA
+    [39.36, 20.49],        # FILIATES
     [40.78197, 21.40981],  # FLORINA
-    [40.08452, 21.42744],  # GREVENA
-    [35.32969, 25.12985],  # IRAKLEION
+    [40.0, 21.32744],  # GREVENA
+    [35.12, 25.12985],  # IRAKLEION
     [35.01186, 25.74234],  # AGIOS NIKOLAOS
-    [39.66486, 20.85189],  # IOANNINA
-    [39.36485, 21.92191],  # KARDITSA
+    [39.76486, 20.85189],  # IOANNINA
+    [39.35485, 21.92191],  # KARDITSA
     [38.91218, 21.79836],  # KARPENISI
-    [40.52165, 21.26341],  # KASTORIA
+    [40.32165, 21.11],  # KASTORIA
     [40.26956, 22.50608],  # KATERINI
     [40.93959, 24.40687],  # KAVALA
     [38.249999, 20.499998],# KEFALONIA
@@ -99,24 +100,23 @@ locations = [
     [39.643452, 22.413208],# LARISA
     [38.7166638, 20.6499974], # LEFKADA
     [37.249999, 21.83333], # METHONI
-    [39.11, 26.55472],     # MYTILINI
-    [37.568497726, 22.78749685], # NAFPLIO
-    [39.28015, 22.81819],  # NEA ANCHIALOS
+    [39.11, 26.25472],     # MYTILINI
+    [37.76, 22.78749685], # NAFPLIO
+    [37.94444, 21.93444],  # NEA ANCHIALOS
     [38.24444, 21.73444],  # PATRA
     [38.95617, 20.7505],   # PREVEZA
     [35.36555, 24.48232],  # RETHYMNO
-    [39.55493, 21.76837],  # TRIKALA
+    [39.75493, 21.76837],  # TRIKALA
     [37.50889, 22.37944],  # TRIPOLI
     [40.52437, 22.20242],  # VEROIA
     [41.13488, 24.888],    # XANTHI
     [37.7999968, 20.749997], # ZAKYNTHOS
     [38.499998, 24.0],     # CHALKIDA
-    [36.44083, 28.2225],   # RHODOS
+    [36.08083, 28.0225],   # RHODES
     [41.08499, 23.54757],  # SERRES
-    [40.84995, 25.87644],  # ALEXANDROUPOLI
-    [37.06, 22.44]         # KOSMAS
+    [41.04995, 25.97644],  # ALEXANDROUPOLI
+    [37.06, 22.64]         # KOSMAS
 ]
-
 
 risk_levels = {
     'very_low': 0.15,
@@ -126,14 +126,21 @@ risk_levels = {
     'very_high': 0.70
 }
 
-# ==========================
-# WeatherAPI-based function
-# ==========================
-def get_weather(city):
-    url = "http://api.weatherapi.com/v1/forecast.json"
-    params = {"key": API_KEY, "q": city + ",GR", "days": 2, "aqi": "no", "alerts": "no"}
+# Display-name overrides for map/tooltips (API query still uses the original city name)
+display_names = {
+    'PAROS': 'CYCLADES ISLANDS',
+    'PATRA': 'ACHAIA'
+}
 
-    response = requests.get(url, params=params)
+def get_weather_hours(city, target_hours=None):
+    # Collect next-day hourly weather for the given hours and return a list of dicts
+    if target_hours is None:
+        target_hours = [f"{h:02d}:00" for h in range(7, 19)]  # 07:00..18:00
+
+    url = "http://api.weatherapi.com/v1/forecast.json"
+    params = {"key": API_KEY, "q": f"{city},GR", "days": 2, "aqi": "no", "alerts": "no"}
+
+    response = requests.get(url, params=params, timeout=10)
     response.raise_for_status()
     data = response.json()
 
@@ -143,60 +150,36 @@ def get_weather(city):
 
     next_day = forecast_days[1]
 
-    # Get 14:00 hour
-    hour_data = None
+    results = []
     for hour in next_day["hour"]:
-        if hour["time"].split(" ")[1] == "14:00":
-            hour_data = hour
-            break
+        hhmm = hour["time"].split(" ")[1]  # e.g., "14:00"
+        if hhmm in target_hours:
+            temp_c = float(hour["temp_c"])
+            dew_c = float(hour["dewpoint_c"])
+            wind_mph = float(hour["wind_mph"])
+            wind_ms = round(wind_mph / 2.237, 2)
+            wind_ms = max(wind_ms, 2.0)  # clamp if model expects min 2 m/s
+            results.append({"time": hhmm, "temp": temp_c, "dew": dew_c, "wind": wind_ms})
 
-    if hour_data is None:
-        raise ValueError(f"14:00 hour not found for {city}")
+    if not results:
+        raise ValueError(f"No target hours found for {city}")
 
-    temp_c = hour_data["temp_c"]
-    dew_c = hour_data["dewpoint_c"]
-    wind_mph = hour_data["wind_mph"]
-    wind_ms = round(wind_mph / 2.237, 2)
+    return results
 
-    if wind_ms < 2:
-        wind_ms = 2
-
-    return temp_c, wind_ms, dew_c
-
-########################
-# ==========================
-# Main mapping and prediction
-# ==========================
-
+## Map setup
 greece_bounds = [[34.8, 19.0], [41.8, 26.5]]
+m = folium.Map(location=[37.97025, 24.12247],
+               zoom_start=6,
+               no_touch=True,
+               zoom_control=False,
+               doubleClickZoom=False,
+               scrollWheelZoom=False,
+               dragging=False)
 
-m = folium.Map(
-    location=[38.0, 19.0],
-    zoom_start=6,
-    max_bounds=True,      # restrict panning outside bounds
-    min_zoom=6,
-    max_zoom=6,
-    no_touch=True,
-    zoom_control=False,
-    doubleClickZoom=False,
-    scrollWheelZoom=False,
-    dragging=False,
-    tiles='OpenStreetMap' # Esri.WorldPhysical , Esri.WorldTopoMap
-)
+m.fit_bounds(greece_bounds)
 
-# Apply the bounds
-m.fit_bounds([[35.0, 32.0], [42.0, 15.0]])
-
-
-# Optional: add a rectangle to visualize bounds
-#folium.Rectangle(
-#    bounds=greece_bounds,
-#    color='blue',
-#    fill=False,
-#).add_to(m)
-##################################
-
-clf = tensorflow.keras.models.load_model('working_model/nn_model_1.h5', compile=False)
+## Load model
+clf = tf.keras.models.load_model('working_model/nn_model_1.h5', compile=False)
 
 for city, loc in zip(cities, locations):
     # Skip specific cities if needed
@@ -204,16 +187,17 @@ for city, loc in zip(cities, locations):
         continue
 
     try:
-        temperature, wind, dew = get_weather(city)
-        print(f"{city}: Temp={temperature}°C, Wind={wind} m/s, Dew={dew}°C")
+        hourly = get_weather_hours(city)  # list of dicts: time, temp, dew, wind
 
-        # Normalize wind if required by prediction model
-        if wind <= 2:
-            wind = 2
+        best_time = None
+        probability = None
 
-        # Predict probability
-        x = np.array([[temperature, wind, dew]], dtype=np.float32)
-        probability = clf.predict(x)[0][0]  # adjust depending on model output
+        for h in hourly:
+            x = np.array([[h["temp"], h["wind"], h["dew"]]], dtype=np.float32)
+            prob = float(clf.predict(x, verbose=0)[0][0])
+            if probability is None or prob > probability:
+                probability = prob
+                best_time = h["time"]
 
         # Determine color and opacity
         if probability <= risk_levels['very_low']:
@@ -237,7 +221,8 @@ for city, loc in zip(cities, locations):
             opacity = 0.8
             label = 'Very High Risk'
 
-        # Add marker to map
+        display_city = display_names.get(city, city)
+
         folium.CircleMarker(
             location=loc,
             radius=12,
@@ -245,8 +230,10 @@ for city, loc in zip(cities, locations):
             fill_opacity=opacity,
             fill_color=color,
             color=color,
-            tooltip=f"{city}: {label}"
+            tooltip=f"{display_city}: {label}"
         ).add_to(m)
+
+        print(f"{display_city}: best hour={best_time}, probability={probability:.3f}")
 
     except Exception as e:
         print(f"Error fetching weather for {city}: {e}")
