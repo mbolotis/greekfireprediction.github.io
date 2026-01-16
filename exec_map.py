@@ -4,8 +4,12 @@ import json
 import numpy as np
 import tensorflow
 import time
+import os
 
-API_KEY = "50a73089557740eb969222141251707"
+API_KEY = os.getenv("WEATHERAPI_KEY")
+
+if not API_KEY:
+    raise RuntimeError("WEATHERAPI_KEY is not set")
 
 cities = [
     'AGRINIO',
